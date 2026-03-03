@@ -337,13 +337,16 @@
         <div class="logo">JobLynk<span>.live</span></div>
         <span class="logo-tagline">AI–human performance</span>
       </div>
-      <div class="nav-links">
+           <div class="nav-links" style="display: flex; gap: 32px; align-items: center;">
         <a href="#">platform</a>
         <a href="#">jpi</a>
         <a href="#">pricing</a>
         <a href="#"><span class="badge-teal"><i class="fas fa-shield-alt" style="margin-right: 4px;"></i> guarantee</span></a>
         <span class="btn-outline-teal">sign in</span>
         <span class="btn-solid-teal">try readiness</span>
+        <!-- Visitor counter -->
+        <div id="visitor-counter" style="background: rgba(255,255,255,0.1); padding: 5px 12px; border-radius: 20px; font-size: 0.9rem; margin-left: auto; white-space: nowrap;">
+          Visitors: <span id="count">1000</span>+
       </div>
     </div>
 
@@ -521,22 +524,26 @@
           <p><strong>platform</strong></p>
           <p>resume analysis · mock interview · JPI · badge</p>
         </div>
-        <div>
-          <p><strong>for</strong> graduates · professionals 3-12y · career advancers</p>
-          <p style="margin-top:12px;"><i class="fas fa-lock teal"></i> guaranteed improvement</p>
-        </div>
-      </div>
-      <div style="text-align: center; margin-top: 56px; color:#60758E;">© 2025 JobLynk.live — readiness, not listings.</div>
-    </footer>
+            </footer>
   </div>
   <div style="height: 20px;"></div>
-    <div style="height: 20px;"></div>
   <script>
-    // your counter script here
+    async function updateCounter() {
+      try {
+        const response = await fetch('/api/counter');
+        const data = await response.json();
+        document.getElementById('count').innerText = data.count;
+      } catch {
+        document.getElementById('count').innerText = 1000;
+      }
+    }
+    updateCounter();
+    setInterval(updateCounter, 60000);
   </script>
 </body>
-</body>
 </html>
+</html>
+
 
 
 
