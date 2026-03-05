@@ -1,1 +1,12 @@
-src/placeholder.txt
+App.tsx
+Navbar.tsx
+Footer.tsx
+Toast.tsx
+admin.tsx
+home.tsx
+resumebuilder.tsx
+samplesvault.tsx
+employerportal.tsx
+payportal.tsx
+index.tsx
+Chatbot.tsx
