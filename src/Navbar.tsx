@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import emblem from "../assets/emblem.jpg";
 
 interface NavbarProps {
   isDarkMode: boolean;
