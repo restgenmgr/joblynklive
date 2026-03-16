@@ -11,7 +11,7 @@ const Home = () => {
         background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)',
         overflow: 'hidden'
       }}>
-        {/* Background image */}
+        {/* Background image - make sure this file exists in public/images/ */}
         <div style={{
           position: 'absolute',
           top: 0,
@@ -201,7 +201,7 @@ const Home = () => {
                   justifyContent: 'center',
                   flexShrink: 0
                 }}>✓</span>
-                <span><strong>Real human support</strong> – tech-support@joblynk.live replies within hours</span>
+                <span><strong>Real human support</strong> – tech-support@joblynk.live</span>
               </li>
               <li style={{
                 marginBottom: '18px',
@@ -219,7 +219,7 @@ const Home = () => {
                   justifyContent: 'center',
                   flexShrink: 0
                 }}>✓</span>
-                <span><strong>Privacy first</strong> – Your Aadhaar and data are encrypted</span>
+                <span><strong>Privacy first</strong> – Your data is encrypted</span>
               </li>
             </ul>
           </div>
@@ -238,7 +238,7 @@ const Home = () => {
             marginBottom: '40px',
             textAlign: 'center'
           }}>
-            Meet the Minds Behind JobLynk
+            Meet the Team
           </h3>
           <div style={{
             display: 'flex',
@@ -247,9 +247,9 @@ const Home = () => {
             justifyContent: 'center'
           }}>
             {[
-              { initials: 'VK', name: 'Vikram Khanna', role: 'Founder, ex-Progress' },
+              { initials: 'VK', name: 'Vikram Khanna', role: 'Founder' },
               { initials: 'NP', name: 'Neha Patel', role: 'Head of Operations' },
-              { initials: 'AR', name: 'Abdul Rahman', role: 'Tech Lead, n8n wizard' }
+              { initials: 'AR', name: 'Abdul Rahman', role: 'Tech Lead' }
             ].map((person, i) => (
               <div key={i} style={{ textAlign: 'center', minWidth: '200px' }}>
                 <div style={{
@@ -283,18 +283,12 @@ const Home = () => {
         textAlign: 'center'
       }}>
         <h3 style={{ color: '#facc15', fontSize: '1.5rem', marginBottom: '15px' }}>
-          📞 We're real, we're reachable
+          📞 We're here to help
         </h3>
         <p style={{ fontSize: '1.1rem' }}>
-          Founder Vikram personally reads every email at{' '}
-          <strong style={{ color: '#facc15' }}>vikram@joblynk.live</strong>
+          Email us at <strong style={{ color: '#facc15' }}>tech-support@joblynk.live</strong>
         </p>
       </div>
-
-      {/* ===== REST OF YOUR PAGES WILL GO HERE ===== */}
-      {/* Page 2: Registration */}
-      {/* Page 3: Preview Vault */}
-      {/* etc... */}
     </>
   );
 };
