@@ -1,16 +1,18 @@
-import './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
+
+console.log("MAIN LOADED ✅");
 
 const rootElement = document.getElementById('root');
+
 if (!rootElement) {
-  throw new Error("Could not find root element to mount to");
+  console.error("ROOT NOT FOUND ❌");
+} else {
+  console.log("ROOT FOUND ✅");
 }
 
-const root = ReactDOM.createRoot(rootElement);
+const root = ReactDOM.createRoot(rootElement!);
+
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <h1 style={{ color: "red" }}>FORCE RENDER 🔥</h1>
 );
