@@ -350,9 +350,9 @@ const Home = () => {
                 fontWeight: 'bold',
                 margin: '0 auto 20px'
               }}>
-                VK
+                NAT
               </div>
-              <h3 style={{ margin: '0 0 5px 0' }}>Vikram Khanna</h3>
+              <h3 style={{ margin: '0 0 5px 0' }}>Nigel A Thomas</h3>
               <p style={{ color: '#64748b' }}>Founder</p>
             </div>
 
@@ -371,12 +371,7 @@ const Home = () => {
                 fontWeight: 'bold',
                 margin: '0 auto 20px'
               }}>
-                NP
-              </div>
-              <h3 style={{ margin: '0 0 5px 0' }}>Neha Patel</h3>
-              <p style={{ color: '#64748b' }}>Head of Operations</p>
-            </div>
-
+              
             {/* Team Member 3 */}
             <div style={{ textAlign: 'center' }}>
               <div style={{
@@ -392,10 +387,6 @@ const Home = () => {
                 fontWeight: 'bold',
                 margin: '0 auto 20px'
               }}>
-                AR
-              </div>
-              <h3 style={{ margin: '0 0 5px 0' }}>Abdul Rahman</h3>
-              <p style={{ color: '#64748b' }}>Tech Lead</p>
             </div>
           </div>
         </div>
@@ -425,7 +416,7 @@ const Home = () => {
             borderRadius: '12px'
           }}>
             <strong style={{ color: '#facc15', fontSize: '1.3rem' }}>
-              tech-support@joblynk.live
+              joblynklive@gmail.com
             </strong>
           </div>
         </div>
