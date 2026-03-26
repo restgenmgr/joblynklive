@@ -1,5 +1,6 @@
 import React from 'react';
-import interviewImage from '../assets/interview2.jpg'; // adjust path if needed
+// Import your image from the assets folder
+import interviewImage from '../assets/interview2.jpg';
 
 const About: React.FC = () => {
   return (
@@ -16,27 +17,18 @@ const About: React.FC = () => {
 
       {/* Main Content */}
       <div className="max-w-6xl mx-auto py-16 px-6">
-        {/* About Us with Image */}
-        <div className="mb-16 flex flex-col md:flex-row gap-10 items-center">
-          <div className="flex-1">
-            <h2 className="text-3xl font-bold mb-6 text-slate-900">About Us</h2>
-            <p className="text-lg leading-relaxed text-slate-700 mb-4">
-              Joblynk.live helps job seekers prepare structured resumes, professional cover letters, and curated employer contact data. 
-              Designed especially for <span className="font-semibold">hospitality, operations, management, and service professionals</span>, 
-              we focus on simplicity, speed, and affordability with Pan-India reach.
-            </p>
-            <p className="text-lg leading-relaxed text-slate-700">
-              We believe that every job seeker deserves a fair chance to present themselves effectively to employers. 
-              Our platform bridges the gap between talent and opportunity through ethical, technology-driven support.
-            </p>
-          </div>
-          <div className="flex-1">
-            <img
-              src={interviewImage}
-              alt="Indian executive interviewing candidates in a 5-star office"
-              className="w-full rounded-lg shadow-lg object-cover h-80"
-            />
-          </div>
+        {/* About Us – without image (or add a different image if you have) */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold mb-6 text-slate-900">About Us</h2>
+          <p className="text-lg leading-relaxed text-slate-700 mb-4">
+            Joblynk.live helps job seekers prepare structured resumes, professional cover letters, and curated employer contact data. 
+            Designed especially for <span className="font-semibold">hospitality, operations, management, and service professionals</span>, 
+            we focus on simplicity, speed, and affordability with Pan-India reach.
+          </p>
+          <p className="text-lg leading-relaxed text-slate-700">
+            We believe that every job seeker deserves a fair chance to present themselves effectively to employers. 
+            Our platform bridges the gap between talent and opportunity through ethical, technology-driven support.
+          </p>
         </div>
 
         {/* How It Works (3-Step Process) */}
@@ -64,15 +56,12 @@ const About: React.FC = () => {
         {/* Who This Is For */}
         <div className="mb-16 bg-white rounded-lg shadow-sm p-8 border border-slate-200">
           <h2 className="text-3xl font-bold mb-6 text-slate-900">Who This Is For</h2>
-          <div className="grid md:grid-cols-2 gap-4">
-            <ul className="list-disc pl-5 space-y-2 text-slate-700">
-              <li>Job seekers looking for structured resume and cover letter support</li>
-              <li>Career switchers aiming to present transferable skills effectively</li>
-              <li>Senior professionals seeking curated employer connections</li>
-              <li>Employers searching for ready-to-apply candidates</li>
-            </ul>
-            {/* Optional: second image, could be removed */}
-          </div>
+          <ul className="list-disc pl-5 space-y-2 text-slate-700">
+            <li>Job seekers looking for structured resume and cover letter support</li>
+            <li>Career switchers aiming to present transferable skills effectively</li>
+            <li>Senior professionals seeking curated employer connections</li>
+            <li>Employers searching for ready-to-apply candidates</li>
+          </ul>
         </div>
 
         {/* Success Stories & Verified Employers */}
@@ -107,11 +96,11 @@ const About: React.FC = () => {
           </p>
         </div>
 
-        {/* NEW: Interview Image at the Bottom */}
+        {/* Your Image at the Bottom */}
         <div className="mt-12 text-center">
           <img
             src={interviewImage}
-            alt="Indian executive interviewing candidate"
+            alt="Indian executive interviewing candidate in a 5-star office"
             className="mx-auto rounded-lg shadow-xl max-w-full h-auto object-cover max-h-96 w-auto"
           />
           <p className="text-sm text-slate-500 mt-2">Bridging talent with opportunity – professional guidance for your career journey.</p>
