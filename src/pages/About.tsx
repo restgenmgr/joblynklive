@@ -96,7 +96,7 @@ const About: React.FC = () => {
         <div className="mt-12 text-center">
           <img
             src="/interview2.jpg"
-            alt="Indian executive interviewing candidate in a 5-star office"
+            alt="Indian executive interviewing candidate"
             className="mx-auto rounded-lg shadow-xl max-w-full h-auto object-cover max-h-96 w-auto"
           />
           <p className="text-sm text-slate-500 mt-2">Bridging talent with opportunity – professional guidance for your career journey.</p>
