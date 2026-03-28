@@ -21,9 +21,9 @@ const Navbar = () => {
     <nav style={{
       display: "flex",
       alignItems: "center",
-      background: "#ffffff",
-      padding: "10px",
-      boxShadow: "0 2px 5px rgba(0,0,0,0.1)"
+      background: "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)",
+      padding: "12px 16px",
+      boxShadow: "0 2px 10px rgba(0,0,0,0.3)"
     }}>
       <img
         src={emblem}
@@ -31,30 +31,41 @@ const Navbar = () => {
         style={{
           width: "50px",
           height: "50px",
-          marginRight: "20px"
+          marginRight: "20px",
+          borderRadius: "50%",
+          border: "2px solid #fbbf24"
         }}
       />
       <div style={{
         display: "flex",
         flexWrap: "wrap",
-        gap: "10px"
+        gap: "8px"
       }}>
         {pages.map((p) => (
           <Link
             key={p.name}
             to={p.path}
             style={{
-              border: "1px solid #ccc",
-              borderRadius: "6px",
+              border: "1px solid #b45309",
+              borderRadius: "8px",
               padding: "8px",
-              width: "130px",
+              width: "120px",
               textDecoration: "none",
               textAlign: "center",
-              background: "#f7f7f7"
+              background: "linear-gradient(135deg, rgba(180,83,9,0.2), rgba(180,83,9,0.1))",
+              transition: "all 0.2s"
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = "linear-gradient(135deg, #b45309, #92400e)";
+              e.currentTarget.style.borderColor = "#fbbf24";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = "linear-gradient(135deg, rgba(180,83,9,0.2), rgba(180,83,9,0.1))";
+              e.currentTarget.style.borderColor = "#b45309";
             }}
           >
-            <div style={{ fontWeight: "bold" }}>{p.name}</div>
-            <div style={{ fontSize: "11px", marginTop: "4px" }}>{p.desc}</div>
+            <div style={{ fontWeight: "bold", color: "#fbbf24", fontSize: "13px" }}>{p.name}</div>
+            <div style={{ fontSize: "10px", marginTop: "3px", color: "#94a3b8" }}>{p.desc}</div>
           </Link>
         ))}
       </div>
