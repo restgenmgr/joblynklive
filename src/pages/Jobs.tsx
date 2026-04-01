@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+ 
 const jobs = [
   { title: 'Restaurant Manager', company: 'Hotel Sunrise', location: 'Mumbai', type: 'Full Time', salary: '₹35,000 - ₹50,000/month', desc: 'Manage daily restaurant operations, lead a team of 20+ staff, ensure guest satisfaction and cost control.', requirements: 'Min 3 years experience in F&B management, strong leadership skills.' },
   { title: 'Catering Supervisor', company: 'EventWorks India', location: 'Delhi', type: 'Full Time', salary: '₹25,000 - ₹35,000/month', desc: 'Supervise catering operations for corporate and social events across Delhi NCR.', requirements: 'Min 2 years catering experience, event management knowledge.' },
