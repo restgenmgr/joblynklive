@@ -14,7 +14,8 @@ const Navbar = () => {
     { name: "Pay Portal", path: "/payportal", desc: "Payments & billing" },
     { name: "Contact", path: "/contact", desc: "Reach our team" },
     { name: "Disclaimer", path: "/disclaimer", desc: "Legal information" },
-    { name: "Support", path: "/support", desc: "Get help & contact" }
+    { name: "Support", path: "/support", desc: "Get help & contact" },
+    { name: "Blog", path: "/blog", desc: "Career tips & articles" }
   ];
 
   return (
