@@ -15,6 +15,7 @@ import Contact from "./pages/Contact";
 import Disclaimer from "./pages/Disclaimer";
 import SignUp from "./pages/SignUp";
 import Support from "./pages/Support";
+<Route path="/blog" element={<Blog />} />
 
 function App() {
   return (
