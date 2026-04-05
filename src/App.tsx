@@ -16,8 +16,7 @@ import Disclaimer from "./pages/Disclaimer";
 import SignUp from "./pages/SignUp";
 import Support from "./pages/Support";
 import Blog from "./pages/Blog";
-<Route path="/blog" element={<Blog />} />
- 
+
 function App() {
   return (
     <Router>
@@ -37,6 +36,7 @@ function App() {
             <Route path="/disclaimer" element={<Disclaimer />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/support" element={<Support />} />
+            <Route path="/blog" element={<Blog />} />
           </Routes>
         </main>
         <Footer />
