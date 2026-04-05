@@ -1,10 +1,21 @@
-﻿<!DOCTYPE html>
-<html>
+﻿$cleanContent = @'
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>What Does a Data Scientist Do? – Beginner's Guide 2026</title>
     <link rel="stylesheet" href="/blog.css">
+    <style>
+        /* Additional inline styles to ensure proper rendering */
+        .blog-container { max-width: 800px; margin: 0 auto; background: white; border-radius: 24px; box-shadow: 0 12px 30px rgba(0,0,0,0.05); padding: 2rem; }
+        .nav-links { display: flex; gap: 1.5rem; justify-content: center; margin-bottom: 2rem; }
+        .nav-links a { color: #1e6f5c; text-decoration: none; }
+        .date { color: #5b6e8c; font-size: 0.9rem; margin-bottom: 1.5rem; }
+        pre { background: #0f172a; color: #e2e8f0; padding: 1rem; border-radius: 16px; overflow-x: auto; }
+        h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
+        h2 { font-size: 1.6rem; margin: 1.8rem 0 1rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.4rem; }
+    </style>
 </head>
 <body>
 <div class="blog-container">
@@ -12,177 +23,53 @@
         <a href="/">Home</a>
         <a href="/blog-pages/">All Posts</a>
     </div>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet" href="/blog.css">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>What Does a Data Scientist Do? â€“ Beginnerâ€™s Guide 2026</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-      background: #f5f7fb;
-      color: #1e293b;
-      line-height: 1.6;
-      padding: 2rem 1rem;
-    }
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      background: white;
-      border-radius: 28px;
-      box-shadow: 0 20px 35px -12px rgba(0,0,0,0.1);
-      overflow: hidden;
-      padding: 2rem 2rem 3rem;
-    }
-    h1 {
-      font-size: 2.2rem;
-      background: linear-gradient(135deg, #0f2b3d, #1e6f5c);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      margin-bottom: 0.5rem;
-      border-left: 5px solid #1e6f5c;
-      padding-left: 1.2rem;
-    }
-    .date {
-      color: #5b6e8c;
-      margin-bottom: 2rem;
-      font-size: 0.9rem;
-      border-left: 5px solid #1e6f5c;
-      padding-left: 1.2rem;
-    }
-    h2 {
-      font-size: 1.6rem;
-      margin: 1.8rem 0 1rem;
-      color: #0f2b3d;
-      border-bottom: 2px solid #e2e8f0;
-      padding-bottom: 0.4rem;
-    }
-    h3 {
-      font-size: 1.3rem;
-      margin: 1.2rem 0 0.6rem;
-      color: #2c3e66;
-    }
-    p, li {
-      color: #2d3e50;
-    }
-    ul, ol {
-      margin: 0.8rem 0 1rem 1.8rem;
-    }
-    li {
-      margin: 0.5rem 0;
-    }
-    .code-block {
-      background: #0f172a;
-      color: #e2e8f0;
-      padding: 1.2rem;
-      border-radius: 16px;
-      overflow-x: auto;
-      font-family: 'Fira Code', 'Cascadia Code', monospace;
-      font-size: 0.9rem;
-      margin: 1.2rem 0;
-      box-shadow: inset 0 0 0 1px #334155, 0 4px 10px rgba(0,0,0,0.05);
-    }
-    .code-block code {
-      white-space: pre-wrap;
-      word-break: break-word;
-    }
-    .tool-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.8rem;
-      margin: 1rem 0;
-    }
-    .tool-tag {
-      background: #eef2ff;
-      color: #1e3a8a;
-      padding: 0.3rem 1rem;
-      border-radius: 40px;
-      font-size: 0.85rem;
-      font-weight: 500;
-    }
-    .highlight {
-      background: #e6f7f0;
-      border-left: 4px solid #1e6f5c;
-      padding: 1rem;
-      border-radius: 12px;
-      margin: 1.5rem 0;
-    }
-    footer {
-      margin-top: 2.5rem;
-      text-align: center;
-      font-size: 0.8rem;
-      color: #6c7a91;
-      border-top: 1px solid #e2e8f0;
-      padding-top: 1.8rem;
-    }
-    @media (max-width: 640px) {
-      .container { padding: 1.5rem; }
-      h1 { font-size: 1.7rem; }
-    }
-  </style>
-</head>
-<body>
-<div class="container">
-  <h1>What Does a Data Scientist Do? <br> A Complete Beginnerâ€™s Guide (2026)</h1>
-  <div class="date">ðŸ“… Updated for 2026 Â· 6 min read</div>
+    <h1>What Does a Data Scientist Do? – A Complete Beginner's Guide (2026)</h1>
+    <div class="date">📅 Updated for 2026 · 6 min read</div>
 
-  <p><strong>Data science</strong> is one of the fastest-growing careers in the tech world. A <strong>Data Scientist</strong> uses data to uncover insights, build predictive models, and help businesses make smarter decisions. If you're curious about breaking into this field, you're in the right place.</p>
+    <p><strong>Data science</strong> is one of the fastest-growing careers in the tech world. A <strong>Data Scientist</strong> uses data to uncover insights, build predictive models, and help businesses make smarter decisions. If you're curious about breaking into this field, you're in the right place.</p>
 
-  <h2>ðŸ” Key Responsibilities of a Data Scientist</h2>
-  <ul>
-    <li>Data collection and cleaning</li>
-    <li>Exploratory Data Analysis (EDA)</li>
-    <li>Building machine learning models</li>
-    <li>Data visualization</li>
-    <li>Communicating insights to stakeholders</li>
-  </ul>
+    <h2>🔍 Key Responsibilities of a Data Scientist</h2>
+    <ul>
+        <li>Data collection and cleaning</li>
+        <li>Exploratory Data Analysis (EDA)</li>
+        <li>Building machine learning models</li>
+        <li>Data visualization</li>
+        <li>Communicating insights to stakeholders</li>
+    </ul>
 
-  <h2>ðŸ› ï¸ Tools Every Data Scientist Uses</h2>
-  <div class="tool-list">
-    <span class="tool-tag">ðŸ Python for data science</span>
-    <span class="tool-tag">ðŸ“Š R programming language</span>
-    <span class="tool-tag">ðŸ—„ï¸ SQL for data querying</span>
-    <span class="tool-tag">ðŸ“š Pandas, NumPy, Scikitâ€‘learn</span>
-    <span class="tool-tag">ðŸ“ˆ Tableau &amp; Power BI</span>
-  </div>
+    <h2>🛠️ Tools Every Data Scientist Uses</h2>
+    <ul>
+        <li>Python for data science</li>
+        <li>R programming language</li>
+        <li>SQL for data querying</li>
+        <li>Libraries like Pandas, NumPy, Scikit-learn</li>
+        <li>Visualization tools like Tableau &amp; Power BI</li>
+    </ul>
 
-  <h2>ðŸ’» Example: Simple Python Code for Data Analysis</h2>
-  <div class="code-block">
-    <code>
-import pandas as pd<br><br>
-data = pd.read_csv("data.csv")<br>
-print(data.describe())
-    </code>
-  </div>
+    <h2>💻 Example: Simple Python Code for Data Analysis</h2>
+    <pre><code>import pandas as pd
 
-  <h2>ðŸ“˜ Skills Required</h2>
-  <ul>
-    <li>Statistics and probability</li>
-    <li>Programming (Python, R)</li>
-    <li>Machine learning basics</li>
-    <li>Data visualization</li>
-  </ul>
+data = pd.read_csv("data.csv")
+print(data.describe())</code></pre>
 
-  <div class="highlight">
-    âœ¨ <strong>Why start learning data science today?</strong> Every industry â€“ from healthcare to retail â€“ needs people who can turn raw numbers into actionable strategies. Start with Python and SQL, then build real projects.
-  </div>
+    <h2>📘 Skills Required</h2>
+    <ul>
+        <li>Statistics and probability</li>
+        <li>Programming (Python, R)</li>
+        <li>Machine learning basics</li>
+        <li>Data visualization</li>
+    </ul>
 
-  <footer>
-    Â© 2026 Â· Your Data Science Blog Â· <a href="#" style="color:#1e6f5c;">Back to top</a>
-  </footer>
+    <div class="highlight" style="background: #e6f7f0; padding: 1rem; border-radius: 12px; margin-top: 1.5rem;">
+        ✨ <strong>Why start learning data science today?</strong> Every industry – from healthcare to retail – needs people who can turn raw numbers into actionable strategies. Start with Python and SQL, then build real projects.
+    </div>
+
+    <footer style="margin-top: 2rem; text-align: center; font-size: 0.8rem; color: #6c7a91; border-top: 1px solid #e2e8f0; padding-top: 1rem;">
+        © 2026 · Joblynk Live · <a href="#" style="color:#1e6f5c;">Back to top</a>
+    </footer>
 </div>
 </body>
 </html>
+'@
 
-
-</div>
-</body>
-</html>
+Set-Content -Path "blog-pages\data-scientist-guide.html" -Value $cleanContent -Encoding UTF8
