@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dbt and the Modern Data Stack – Complete Guide 2026</title>
+    <link rel="stylesheet" href="/blog.css">
+    <style>
+        .blog-container { max-width: 800px; margin: 0 auto; background: white; border-radius: 24px; box-shadow: 0 12px 30px rgba(0,0,0,0.05); padding: 2rem; }
+        .nav-links { display: flex; gap: 1.5rem; justify-content: center; margin-bottom: 2rem; }
+        .nav-links a { color: #1e6f5c; text-decoration: none; }
+        .date { color: #5b6e8c; font-size: 0.9rem; margin-bottom: 1.5rem; }
+        pre { background: #0f172a; color: #e2e8f0; padding: 1rem; border-radius: 16px; overflow-x: auto; }
+        h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
+        h2 { font-size: 1.6rem; margin: 1.8rem 0 1rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.4rem; }
+        table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+        th { background: #1e3a8a; color: white; padding: 0.6rem 1rem; text-align: left; }
+        td { padding: 0.6rem 1rem; border-bottom: 1px solid #e2e8f0; }
+        tr:nth-child(even) { background: #f8fafc; }
+    </style>
+</head>
+<body>
+<div class="blog-container">
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/blog-pages/">All Posts</a>
+    </div>
+    <h1>dbt and the Modern Data Stack: A Data Engineer's Complete Guide (2026)</h1>
+    <div class="date">📅 April 2026 · 12 min read</div>
+    <p>The <strong>modern data stack</strong> has fundamentally changed how data teams operate. At the center of this revolution sits <strong>dbt (data build tool)</strong> — a transformation framework that brought software engineering best practices to SQL analytics. In this guide, we break down what dbt is, how it works, and how to use it in production.</p>
+
+    <h2>🏗️ What Is the Modern Data Stack?</h2>
+    <p>The <strong>Modern Data Stack (MDS)</strong> is a collection of cloud-native tools that form a complete data platform. It is modular, scalable, SQL-first, and built for the cloud.</p>
+    <pre><code>[Sources] → [Ingestion] → [Storage] → [Transformation] → [Serving]
+SaaS Apps    Airbyte      Snowflake       dbt               Looker
+Databases    Fivetran     BigQuery                          Metabase
+APIs         Kafka        Redshift                          Power BI</code></pre>
+
+    <h2>🔧 What Is dbt?</h2>
+    <p><strong>dbt</strong> is an open-source tool that enables data engineers and analysts to <strong>transform data inside their warehouse using SQL</strong>. It brings version control, testing, documentation, and CI/CD to your transformation layer.</p>
+    <ul>
+        <li>Write modular SQL models that build on each other</li>
+        <li>Test data quality with built-in and custom tests</li>
+        <li>Auto-generate documentation with lineage graphs</li>
+        <li>Version control all transformations with Git</li>
+    </ul>
+
+    <h2>☁️ dbt Core vs dbt Cloud</h2>
+    <table>
+        <tr><th>Feature</th><th>dbt Core</th><th>dbt Cloud</th></tr>
+        <tr><td>Cost</td><td>Free, open-source</td><td>Paid (free tier available)</td></tr>
+        <tr><td>Interface</td><td>CLI only</td><td>Web IDE + CLI</td></tr>
+        <tr><td>Scheduling</td><td>Bring your own (Airflow)</td><td>Built-in scheduler</td></tr>
+        <tr><td>CI/CD</td><td>Manual setup</td><td>Native GitHub integration</td></tr>
+        <tr><td>Best for</td><td>Engineers comfortable with CLI</td><td>Teams wanting managed experience</td></tr>
+    </table>
+
+    <h2>📁 dbt Models: The Core Concept</h2>
+    <p>A <strong>model</strong> is a simple <code>.sql</code> file with a SELECT statement. dbt compiles and runs it against your warehouse.</p>
+    <pre><code>-- models/marts/fct_orders.sql
+SELECT
+    o.order_id,
+    o.customer_id,
+    o.order_date,
+    SUM(oi.quantity * oi.unit_price) AS total_revenue
+FROM {{ ref('stg_orders') }} o
+LEFT JOIN {{ ref('stg_order_items') }} oi
+    ON o.order_id = oi.order_id
+GROUP BY 1, 2, 3</code></pre>
+
+    <h2>🧱 Materializations</h2>
+    <ul>
+        <li><strong>view</strong> – A SQL view, no data stored (fastest to build)</li>
+        <li><strong>table</strong> – Full table rebuild each run</li>
+        <li><strong>incremental</strong> – Only processes new or changed rows (best for large tables)</li>
+        <li><strong>ephemeral</strong> – A CTE, never written to the warehouse</li>
+    </ul>
+
+    <h2>✅ Built-in Data Testing</h2>
+    <pre><code>models:
+  - name: stg_customers
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+      - name: email
+        tests:
+          - unique
+          - not_null</code></pre>
+
+    <h2>📂 Recommended dbt Project Structure</h2>
+    <pre><code>my_dbt_project/
+├── models/
+│   ├── staging/       # 1:1 with source tables, light cleaning
+│   ├── intermediate/  # Complex joins and business logic
+│   └── marts/         # Final analytics-ready tables
+│       ├── finance/
+│       └── marketing/
+├── tests/             # Custom SQL tests
+├── macros/            # Reusable Jinja SQL functions
+├── snapshots/         # SCD Type 2 historical tracking
+└── dbt_project.yml</code></pre>
+
+    <h2>🔄 Incremental Models at Scale</h2>
+    <pre><code>{{ config(
+    materialized='incremental',
+    unique_key='event_id'
+) }}
+
+SELECT event_id, user_id, event_type, event_timestamp
+FROM {{ source('raw', 'events') }}
+
+{% if is_incremental() %}
+WHERE event_timestamp > (SELECT MAX(event_timestamp) FROM {{ this }})
+{% endif %}</code></pre>
+
+    <h2>✅ dbt Best Practices</h2>
+    <ul>
+        <li>Use <code>ref()</code> everywhere — never hardcode schema or table names</li>
+        <li>Tag your models for selective runs: <code>dbt run --select tag:finance</code></li>
+        <li>Set up CI to run only modified models and downstream dependencies on every PR</li>
+        <li>Declare raw tables as sources with freshness checks</li>
+        <li>Use snapshots for SCD Type 2 historical tracking</li>
+        <li>Abstract repeated SQL patterns into Jinja macros</li>
+    </ul>
+
+    <div style="background: #e6f7f0; padding: 1rem; border-radius: 12px; margin-top: 1.5rem;">
+        ✨ <strong>dbt is the lingua franca of data transformation in 2026.</strong> Combined with Snowflake or BigQuery and an orchestrator like Airflow or Dagster, mastering dbt is the fastest path to building world-class data platforms.
+    </div>
+
+    <footer style="margin-top: 2rem; text-align: center; font-size: 0.8rem; color: #6c7a91; border-top: 1px solid #e2e8f0; padding-top: 1rem;">
+        © 2026 · Joblynk Live · <a href="#" style="color:#1e6f5c;">Back to top</a>
+    </footer>
+</div>
+</body>
+</html>
