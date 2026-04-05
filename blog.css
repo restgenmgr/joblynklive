@@ -1,4 +1,5 @@
-﻿* {
+/* blog.css - Modern, responsive blog styling */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -38,17 +39,44 @@ h2 {
   padding-bottom: 0.4rem;
 }
 
-ul, ol { margin: 0.8rem 0 1rem 1.8rem; }
-li { margin: 0.5rem 0; }
+h3 {
+  font-size: 1.3rem;
+  margin: 1.2rem 0 0.6rem;
+  color: #2c3e66;
+}
 
-pre {
+p, li {
+  color: #1e293b;
+  margin-bottom: 1rem;
+}
+
+ul, ol {
+  margin: 0.8rem 0 1rem 1.8rem;
+}
+
+li {
+  margin: 0.5rem 0;
+}
+
+pre, code {
   background: #0f172a;
   color: #e2e8f0;
+  padding: 0.2rem 0.4rem;
+  border-radius: 8px;
+  font-family: 'Fira Code', 'Cascadia Code', monospace;
+  font-size: 0.9rem;
+}
+
+pre {
   padding: 1rem;
-  border-radius: 16px;
   overflow-x: auto;
-  font-family: monospace;
   margin: 1rem 0;
+  border-radius: 16px;
+}
+
+pre code {
+  background: none;
+  padding: 0;
 }
 
 .date {
@@ -62,10 +90,18 @@ pre {
   gap: 1.5rem;
   justify-content: center;
   margin-bottom: 2rem;
+  flex-wrap: wrap;
 }
 
-.nav-links a { color: #1e6f5c; text-decoration: none; }
-.nav-links a:hover { text-decoration: underline; }
+.nav-links a {
+  color: #1e6f5c;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
 
 @media (max-width: 640px) {
   .blog-container { padding: 1.5rem; }
