@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Job Blogs – Technical & Non-Technical | JobLynk</title>
+  <meta name="description" content="Explore expert career blogs on technical and non-technical jobs. Tips, guides and industry insights to help you land your next role."/>
+
+  <!-- ✅ Google AdSense – pub-4282121192943910 -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4282121192943910" crossorigin="anonymous"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root {
+      --navy:      #0B1A2E;
+      --navy-soft: #1E3350;
+      --teal:      #00C896;
+      --teal-mid:  #00A87E;
+      --teal-soft: #E0FBF4;
+      --blue:      #1A6EF5;
+      --blue-soft: #EBF2FF;
+      --text:      #1C2B3A;
+      --muted:     #6B7A8D;
+      --border:    #E3EAF2;
+      --white:     #FFFFFF;
+      --bg:        #F4F7FB;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; }
+    a { text-decoration: none; }
+
+    /* ── NAV ── */
+    nav {
+      background: var(--navy); height: 66px;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 2.5rem; position: sticky; top: 0; z-index: 200;
+    }
+    .logo { font-family: 'Playfair Display', serif; font-size: 24px; color: #fff; }
+    .logo span { color: var(--teal); }
+    .nav-links { display: flex; align-items: center; gap: 28px; }
+    .nav-links a { color: #8BA5C0; font-size: 14px; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: #fff; }
+    .nav-cta { background: var(--teal); color: var(--navy) !important; padding: 8px 20px; border-radius: 8px; font-weight: 600 !important; }
+
+    /* ── BLOG DROPDOWN ── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown > .drop-trigger {
+      color: var(--teal); font-size: 14px; font-weight: 500;
+      cursor: pointer; display: flex; align-items: center; gap: 5px;
+      transition: color 0.2s; background: none; border: none;
+      font-family: 'DM Sans', sans-serif; padding: 0;
+    }
+    .nav-dropdown:hover > .drop-trigger { color: var(--white); }
+    .drop-trigger .arrow { font-size: 10px; transition: transform 0.2s; display: inline-block; }
+    .nav-dropdown:hover .arrow { transform: rotate(180deg); }
+    .drop-menu {
+      display: none; position: absolute; top: calc(100% + 14px); left: 50%;
+      transform: translateX(-50%);
+      background: #102035; border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px; padding: 8px; min-width: 220px;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.35); z-index: 300;
+    }
+    .nav-dropdown:hover .drop-menu { display: block; }
+    .drop-menu::before {
+      content: ''; position: absolute; top: -6px; left: 50%;
+      width: 10px; height: 10px; background: #102035;
+      border-left: 1px solid rgba(255,255,255,0.1);
+      border-top: 1px solid rgba(255,255,255,0.1);
+      transform: translateX(-50%) rotate(45deg);
+    }
+    .drop-item {
+      display: flex; align-items: center; gap: 10px;
+      padding: 10px 12px; border-radius: 8px;
+      color: #8BA5C0; font-size: 13px; font-weight: 500;
+      text-decoration: none; transition: all 0.15s;
+    }
+    .drop-item:hover { background: rgba(255,255,255,0.07); color: var(--white); }
+    .drop-icon { width: 30px; height: 30px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; }
+    .drop-icon.tech    { background: rgba(0,200,150,0.15); }
+    .drop-icon.nontech { background: rgba(26,110,245,0.15); }
+    .drop-item-text small { display: block; font-size: 11px; color: #4A6A8A; margin-top: 1px; font-weight: 400; }
+    .drop-divider { height: 1px; background: rgba(255,255,255,0.07); margin: 6px 0; }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--navy); padding: 68px 2rem 76px;
+      text-align: center; position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; border-radius: 50%; pointer-events: none;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(0,200,150,0.10) 0%, transparent 65%);
+      top: -280px; left: 50%; transform: translateX(-50%);
+    }
+    .hero-badge {
+      display: inline-block; background: rgba(0,200,150,0.12);
+      border: 1px solid rgba(0,200,150,0.25); color: var(--teal);
+      font-size: 12px; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; padding: 5px 16px; border-radius: 30px; margin-bottom: 20px;
+    }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(30px, 5vw, 52px); color: #fff; line-height: 1.12; margin-bottom: 14px; }
+    .hero h1 em { color: var(--teal); font-style: normal; }
+    .hero p { color: #7A9AB8; font-size: 16px; max-width: 520px; margin: 0 auto 32px; }
+    .hero-search {
+      display: flex; max-width: 500px; margin: 0 auto;
+      background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 10px; overflow: hidden;
+    }
+    .hero-search input {
+      flex: 1; background: transparent; border: none; outline: none;
+      padding: 13px 18px; color: #fff; font-family: 'DM Sans', sans-serif; font-size: 15px;
+    }
+    .hero-search input::placeholder { color: #4A6A8A; }
+    .hero-search button {
+      background: var(--teal); border: none; padding: 0 24px;
+      color: var(--navy); font-weight: 700; font-family: 'DM Sans', sans-serif; font-size: 14px; cursor: pointer;
+    }
+
+    /* ── WRAP ── */
+    .wrap { max-width: 1160px; margin: 0 auto; padding: 0 1.5rem; }
+
+    /* ── AD ── */
+    .ad-strip {
+      background: var(--white); border: 1px dashed var(--border);
+      border-radius: 10px; min-height: 90px;
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden; position: relative; margin: 32px 0;
+    }
+    .ad-label { font-size: 10px; color: #BCC8D8; letter-spacing: 0.05em; text-transform: uppercase; position: absolute; top: 6px; right: 10px; }
+
+    /* ── SECTION HEAD ── */
+    .section-head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 20px; }
+    .section-head h2 { font-family: 'Playfair Display', serif; font-size: 26px; color: var(--navy); }
+
+    /* ══ OPTION 3 CATEGORY CARDS ══ */
+    .cat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 44px; }
+
+    .cat-card {
+      border-radius: 18px; padding: 28px 26px;
+      display: flex; align-items: flex-start; gap: 18px;
+      cursor: pointer; position: relative; overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+      border: 2px solid transparent; user-select: none;
+    }
+    .cat-card:hover { transform: translateY(-4px); box-shadow: 0 18px 48px rgba(0,0,0,0.11); }
+    .cat-card.tech    { background: var(--navy);  border-color: var(--navy-soft); }
+    .cat-card.nontech { background: var(--white); border-color: var(--border); }
+    .cat-card.tech.selected    { border-color: var(--teal); box-shadow: 0 0 0 4px rgba(0,200,150,0.15); }
+    .cat-card.nontech.selected { border-color: var(--blue); box-shadow: 0 0 0 4px rgba(26,110,245,0.12); }
+    .cat-card.dimmed  { opacity: 0.4; transform: none !important; box-shadow: none !important; }
+
+    .cat-card::after {
+      content: ''; position: absolute; right: -40px; bottom: -40px;
+      width: 130px; height: 130px; border-radius: 50%; pointer-events: none;
+    }
+    .cat-card.tech::after    { background: rgba(0,200,150,0.07); }
+    .cat-card.nontech::after { background: rgba(26,110,245,0.05); }
+
+    .cat-tick {
+      position: absolute; top: 14px; right: 16px;
+      width: 22px; height: 22px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 12px; font-weight: 700; opacity: 0; transition: opacity 0.2s;
+    }
+    .tech    .cat-tick { background: var(--teal); color: var(--navy); }
+    .nontech .cat-tick { background: var(--blue); color: #fff; }
+    .cat-card.selected .cat-tick { opacity: 1; }
+
+    .cat-icon { width: 52px; height: 52px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0; }
+    .tech    .cat-icon { background: rgba(0,200,150,0.15); }
+    .nontech .cat-icon { background: var(--blue-soft); }
+
+    .cat-body { flex: 1; }
+    .tech    .cat-body h3 { color: #fff;         font-size: 18px; font-weight: 600; margin-bottom: 6px; }
+    .nontech .cat-body h3 { color: var(--navy);  font-size: 18px; font-weight: 600; margin-bottom: 6px; }
+    .tech    .cat-body p  { color: #6B90B0;      font-size: 13px; line-height: 1.5; margin-bottom: 14px; }
+    .nontech .cat-body p  { color: var(--muted); font-size: 13px; line-height: 1.5; margin-bottom: 14px; }
+
+    .cat-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+    .cat-tag  { font-size: 11px; font-weight: 500; padding: 3px 10px; border-radius: 20px; }
+    .tech    .cat-tag { background: rgba(0,200,150,0.15); color: var(--teal); }
+    .nontech .cat-tag { background: var(--blue-soft);     color: var(--blue); }
+
+    .cat-footer { display: flex; align-items: center; justify-content: space-between; padding-top: 14px; }
+    .tech    .cat-footer { border-top: 1px solid rgba(255,255,255,0.08); }
+    .nontech .cat-footer { border-top: 1px solid var(--border); }
+    .cat-count { font-size: 13px; font-weight: 600; }
+    .tech    .cat-count { color: var(--teal); }
+    .nontech .cat-count { color: var(--blue); }
+    .cat-arrow { font-size: 13px; font-weight: 700; }
+    .tech    .cat-arrow { color: var(--teal); }
+    .nontech .cat-arrow { color: var(--blue); }
+
+    /* ── FILTER BAR ── */
+    .filter-bar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; flex-wrap: wrap; gap: 10px; }
+    .filter-info { font-size: 14px; color: var(--muted); }
+    .filter-info strong { color: var(--navy); font-weight: 600; }
+    .clear-btn { font-size: 13px; color: var(--blue); font-weight: 500; background: none; border: none; cursor: pointer; padding: 0; display: none; }
+    .clear-btn.visible { display: block; }
+
+    /* ── BLOG GRID ── */
+    .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+
+    .blog-card {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: 14px; overflow: hidden;
+      display: flex; flex-direction: column;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .blog-card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0,0,0,0.08); }
+    .blog-card.hidden { display: none; }
+
+    .blog-thumb { height: 150px; display: flex; align-items: center; justify-content: center; font-size: 36px; }
+    .blog-thumb.t  { background: linear-gradient(135deg, #0B1A2E, #1E3350); }
+    .blog-thumb.nt { background: linear-gradient(135deg, #EBF2FF, #D0E4FF); }
+
+    .blog-body { padding: 18px; flex: 1; display: flex; flex-direction: column; }
+    .blog-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 9px; }
+    .blog-badge { font-size: 10px; font-weight: 700; padding: 3px 9px; border-radius: 20px; letter-spacing: 0.04em; }
+    .blog-badge.tech { background: var(--teal-soft); color: #00855F; }
+    .blog-badge.nt   { background: var(--blue-soft); color: var(--blue); }
+    .blog-date { font-size: 11px; color: var(--muted); }
+    .blog-card h3 { font-size: 14px; font-weight: 600; color: var(--navy); line-height: 1.45; margin-bottom: 7px; flex: 1; }
+    .blog-card p  { font-size: 12px; color: var(--muted); line-height: 1.6; }
+    .blog-foot { display: flex; align-items: center; justify-content: space-between; margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--border); }
+    .blog-author { font-size: 11px; color: var(--muted); }
+    .blog-read   { font-size: 11px; font-weight: 600; color: var(--blue); }
+
+    .no-results { grid-column: 1/-1; text-align: center; padding: 48px 0; color: var(--muted); font-size: 15px; display: none; }
+
+    /* ── NEWSLETTER ── */
+    .newsletter { background: var(--navy); border-radius: 20px; padding: 48px 40px; text-align: center; margin: 48px 0; position: relative; overflow: hidden; }
+    .newsletter::before { content: ''; position: absolute; border-radius: 50%; pointer-events: none; width: 400px; height: 400px; background: radial-gradient(circle, rgba(0,200,150,0.12) 0%, transparent 65%); top: -150px; right: -80px; }
+    .newsletter h2 { font-family: 'Playfair Display', serif; color: #fff; font-size: 28px; margin-bottom: 10px; }
+    .newsletter p  { color: #6B90B0; font-size: 15px; margin-bottom: 28px; }
+    .nl-form { display: flex; gap: 10px; max-width: 460px; margin: 0 auto; }
+    .nl-form input { flex: 1; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 8px; padding: 12px 16px; color: #fff; font-family: 'DM Sans', sans-serif; font-size: 14px; outline: none; }
+    .nl-form input::placeholder { color: #4A6A8A; }
+    .nl-form button { background: var(--teal); color: var(--navy); border: none; border-radius: 8px; padding: 12px 24px; font-weight: 700; font-family: 'DM Sans', sans-serif; font-size: 14px; cursor: pointer; }
+
+    /* ── FOOTER ── */
+    footer { background: var(--navy); padding: 32px 2.5rem 24px; margin-top: 60px; }
+    .foot-inner { max-width: 1160px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px; }
+    .foot-inner p { color: #2E4560; font-size: 13px; }
+    .foot-links { display: flex; gap: 20px; }
+    .foot-links a { color: #2E4560; font-size: 13px; transition: color 0.2s; }
+    .foot-links a:hover { color: var(--teal); }
+
+    @media (max-width: 900px) { .blog-grid { grid-template-columns: repeat(2,1fr); } }
+    @media (max-width: 640px) { .cat-grid { grid-template-columns: 1fr; } .blog-grid { grid-template-columns: 1fr; } .nav-links { display: none; } .nl-form { flex-direction: column; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">Job<span>Lynk</span></a>
+  <div class="nav-links">
+    <a href="/jobs">Jobs</a>
+    <div class="nav-dropdown">
+      <button class="drop-trigger">Blogs &#9660;</button>
+      <div class="drop-menu">
+        <a href="#" class="drop-item" onclick="event.preventDefault(); selectCategory('tech');">
+          <div class="drop-icon tech">💻</div>
+          <div class="drop-item-text">Technical Blogs<small>Dev, Data, AI, DevOps, UX</small></div>
+        </a>
+        <div class="drop-divider"></div>
+        <a href="#" class="drop-item" onclick="event.preventDefault(); selectCategory('nontech');">
+          <div class="drop-icon nontech">💼</div>
+          <div class="drop-item-text">Non-Technical Blogs<small>Sales, HR, Marketing, Finance</small></div>
+        </a>
+        <div class="drop-divider"></div>
+        <a href="#" class="drop-item" onclick="event.preventDefault(); clearFilter();">
+          <div class="drop-icon" style="background:rgba(255,255,255,0.06);">📚</div>
+          <div class="drop-item-text">All Blogs<small>View everything</small></div>
+        </a>
+      </div>
+    </div>
+    <a href="/companies">Companies</a>
+    <a href="/about">About</a>
+    <a href="/post-job" class="nav-cta">Post a Job</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-badge">Career Insights &amp; Job Tips</div>
+  <h1>Blogs for Every<br/><em>Career Path</em></h1>
+  <p>Expert advice and guides — whether you're in tech or blazing a non-technical trail.</p>
+  <div class="hero-search">
+    <input type="text" id="searchInput" placeholder="Search blogs, topics or skills…" oninput="filterAll()"/>
+    <button onclick="filterAll()">Search</button>
+  </div>
+</section>
+
+<div class="wrap">
+
+  <!-- AdSense Top -->
+  <div class="ad-strip">
+    <span class="ad-label">Ad</span>
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4282121192943910" data-ad-slot="AUTO" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <!-- ══ OPTION 3 — CATEGORY CARDS ══ -->
+  <div class="section-head">
+    <h2>Browse by Category</h2>
+    <span style="font-size:13px;color:var(--muted);">Click a card to filter blogs below</span>
+  </div>
+
+  <div class="cat-grid">
+    <div class="cat-card tech" id="card-tech" onclick="selectCategory('tech')">
+      <div class="cat-tick">✓</div>
+      <div class="cat-icon">💻</div>
+      <div class="cat-body">
+        <h3>Technical Job Blogs</h3>
+        <p>In-depth guides for developers, data scientists, DevOps, AI/ML engineers and designers.</p>
+        <div class="cat-tags">
+          <span class="cat-tag">Software Dev</span>
+          <span class="cat-tag">Data Science</span>
+          <span class="cat-tag">UI/UX</span>
+          <span class="cat-tag">DevOps</span>
+          <span class="cat-tag">AI / ML</span>
+        </div>
+        <div class="cat-footer">
+          <span class="cat-count">6 articles</span>
+          <span class="cat-arrow">Show Technical →</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cat-card nontech" id="card-nontech" onclick="selectCategory('nontech')">
+      <div class="cat-tick">✓</div>
+      <div class="cat-icon">💼</div>
+      <div class="cat-body">
+        <h3>Non-Technical Job Blogs</h3>
+        <p>Career tips for sales, HR, marketing, finance and operations professionals.</p>
+        <div class="cat-tags">
+          <span class="cat-tag">Sales &amp; BD</span>
+          <span class="cat-tag">HR</span>
+          <span class="cat-tag">Marketing</span>
+          <span class="cat-tag">Finance</span>
+          <span class="cat-tag">Operations</span>
+        </div>
+        <div class="cat-footer">
+          <span class="cat-count">6 articles</span>
+          <span class="cat-arrow">Show Non-Technical →</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Filter status -->
+  <div class="filter-bar">
+    <div class="filter-info" id="filterInfo">Showing <strong>all 12 articles</strong></div>
+    <button class="clear-btn" id="clearBtn" onclick="clearFilter()">✕ Show all</button>
+  </div>
+
+  <!-- ══ BLOG POSTS ══ -->
+  <div class="blog-grid" id="blogGrid">
+
+    <a href="#" class="blog-card" data-cat="tech">
+      <div class="blog-thumb t">🏗️</div>
+      <div class="blog-body">
+        <div class="blog-meta"><span class="blog-badge tech">Technical</span><span class="blog-date">Mar 28, 2025</span></div>
+        <h3>How to Crack System Design Interviews in 2025</h3>
+        <p>Scalability, databases and architecture patterns that top companies actually ask about.</p>
+        <div class="blog-foot"><span class="blog-author">Rohan Mehta</span><span class="blog-read">8 min read →</span></div>
+      </div>
+    </a>
+
+    <a href="#" class="blog-card" data-cat="tech">
+      <div class="blog-thumb t">⚡</div>
+      <div class="blog-body">
+        <div class="blog-meta"><span class="blog-badge tech">Technical</span><span class="blog-date">Mar 20, 2025</span></div>
+        <h3>Python vs JavaScript: Which Pays More in India?</h3>
+        <p>A data-backed comparison of job demand, salaries and career paths for both languages.</p>
+        <div class="blog-foot"><span class="blog-author">Priya Sharma</span><span class="blog-read">6 min read →</span></div>
+      </div>
+    </a>
+
+    <a href="#" class="blog-card" data-cat="tech">
+      <div class="blog-thumb t">📊</div>
+      <div class="blog-body">
+        <div class="blog-meta"><span class="blog-badge tech">Technical</span><span class="blog-date">Mar 14, 2025</span></div>
+        <h3>Top 10 Data Science Skills Employers Want Right Now</h3>
+        <p>From Pandas to MLOps — skills hiring managers are actively screening for in 2025.</p>
+        <div class="blog-foot"><span class="blog-author">Arjun Nair</span><span class="blog-read">5 min read →</span></div>
+      </div>
+    </a>
+
+    <a href="#" class="blog-card" data-cat="tech">
+      <div class="blog-thumb t">🚀</div>
+      <div class="blog-body">
+        <div class="blog-meta"><span class="blog-badge tech">Technical</span><span class="blog-date">Mar 10, 2025</span></div>
+        <h3>How to Get Your First DevOps Job in 2025</h3>
+        <p>The tools, certifications and portfolio projects that open DevOps doors fast.</p>
+        <div class="blog-foot"><span class="blog-author">Karan Singh</span><span class="blog-read">7 min read →</span></div>
+      </div>
+    </a>
+
+    <a href="#" class="blog-card" data-cat="tech">
+      <div class="blog-thumb t">🤖</div>
+      <div class="blog-body">
+        <div class="blog-meta"><span class="blog-badge tech">Technical</span><span class="blog-date">Mar 5, 2025</span></div>
+        <h3>AI & ML Jobs in India — What Companies Are Really Hiring For</h3>
+        <p>The roles, skills and salary ranges across India's growing AI job market.</p>
+        <div class="blog-foot"><span class="blog-author">Neha Verma</span><span class="blog-read">9 min read →</span></div>
+      </div>
+    </a>
+
+    <a href="#" class="blog-card" data-cat="tech">
+      <div class="blog-thumb t">🎨</div>
+      <div class="blog-body">
+        <div class="blog-meta"><span class="blog-badge tech">Technical</span><span class="blog-date">Feb 28, 2025</span></div>
+        <h3>Building a UX Portfolio That Gets You Hired</h3>
+        <p>What to include, what to cut and how to present case studies that impress.</p>
+        <div class="blog-foot"><span class="blog-author">Pooja Iyer</span><span class="blog-read">6 min read →</span></div>
+      </div>
+    </a>
+
+    <a href="#" class="blog-card" data-cat="nontech">
+      <div class="blog-thumb nt">✉️</div>
+      <div class="blog-body">
+        <div class="blog-meta"><span class="blog-badge nt">Non-Technical</span><span class="blog-date">Mar 26, 2025</span></div>
+        <h3>How to Write a Cover Letter That Gets You Shortlisted</h3>
+        <p>Simple structure, real examples and the biggest mistakes to avoid.</p>
+        <div class="blog-foot"><span class="blog-author">Sneha Kapoor</span><span class="blog-read">5 min read →</span></div>
+      </div>
+    </a>
+
+    <a href="#" class="blog-card" data-cat="nontech">
+      <div class="blog-thumb nt">💰</div>
+      <div class="blog-body">
+        <div class="blog-meta"><span class="blog-badge nt">Non-Technical</span><span class="blog-date">Mar 18, 2025</span></div>
+        <h3>Salary Negotiation Tips That Actually Work in India</h3>
+        <p>How to handle counter-offers and walk away with a better package.</p>
+        <div class="blog-foot"><span class="blog-author">Vikram Rao</span><span class="blog-read">7 min read →</span></div>
+      </div>
+    </a>
+
+    <a href="#" class="blog-card" data-cat="nontech">
+      <div class="blog-thumb nt">🎯</div>
+      <div class="blog-body">
+        <div class="blog-meta"><span class="blog-badge nt">Non-Technical</span><span class="blog-date">Mar 10, 2025</span></div>
+        <h3>25 HR Interview Questions and How to Answer Them</h3>
+        <p>The behavioural questions every interviewer asks — and the frameworks that work.</p>
+        <div class="blog-foot"><span class="blog-author">Ananya Desai</span><span class="blog-read">9 min read →</span></div>
+      </div>
+    </a>
+
+    <a href="#" class="blog-card" data-cat="nontech">
+      <div class="blog-thumb nt">📣</div>
+      <div class="blog-body">
+        <div class="blog-meta"><span class="blog-badge nt">Non-Technical</span><span class="blog-date">Mar 6, 2025</span></div>
+        <h3>How to Break Into Digital Marketing With No Experience</h3>
+        <p>Free courses, portfolio projects and the job titles to target first.</p>
+        <div class="blog-foot"><span class="blog-author">Rahul Gupta</span><span class="blog-read">6 min read →</span></div>
+      </div>
+    </a>
+
+    <a href="#" class="blog-card" data-cat="nontech">
+      <div class="blog-thumb nt">🤝</div>
+      <div class="blog-body">
+        <div class="blog-meta"><span class="blog-badge nt">Non-Technical</span><span class="blog-date">Feb 26, 2025</span></div>
+        <h3>Top Sales Skills Every Employer Looks for in 2025</h3>
+        <p>From consultative selling to CRM tools — what separates top performers.</p>
+        <div class="blog-foot"><span class="blog-author">Divya Menon</span><span class="blog-read">5 min read →</span></div>
+      </div>
+    </a>
+
+    <a href="#" class="blog-card" data-cat="nontech">
+      <div class="blog-thumb nt">📋</div>
+      <div class="blog-body">
+        <div class="blog-meta"><span class="blog-badge nt">Non-Technical</span><span class="blog-date">Feb 20, 2025</span></div>
+        <h3>How to Move From Operations Into a Management Role</h3>
+        <p>The skills and visibility strategies that accelerate your promotion.</p>
+        <div class="blog-foot"><span class="blog-author">Suresh Pillai</span><span class="blog-read">8 min read →</span></div>
+      </div>
+    </a>
+
+    <div class="no-results" id="noResults">
+      No blogs found. <button onclick="clearFilter()" style="color:var(--blue);background:none;border:none;cursor:pointer;font-size:15px;font-family:inherit;">Clear filter →</button>
+    </div>
+
+  </div>
+
+  <!-- AdSense Mid -->
+  <div class="ad-strip" style="min-height:280px; margin-top:44px;">
+    <span class="ad-label">Ad</span>
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4282121192943910" data-ad-slot="AUTO" data-ad-format="rectangle" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <!-- Newsletter -->
+  <div class="newsletter">
+    <h2>Get Weekly Career Insights</h2>
+    <p>Fresh blogs, job tips and hiring trends — straight to your inbox every Monday.</p>
+    <div class="nl-form">
+      <input type="email" placeholder="Enter your email address"/>
+      <button>Subscribe Free</button>
+    </div>
+  </div>
+
+  <!-- AdSense Bottom -->
+  <div class="ad-strip" style="margin-bottom:48px;">
+    <span class="ad-label">Ad</span>
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4282121192943910" data-ad-slot="AUTO" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+</div>
+
+<footer>
+  <div class="foot-inner">
+    <p>&copy; 2025 JobLynk. All rights reserved.</p>
+    <div class="foot-links">
+      <a href="/">Home</a>
+      <a href="/privacy-policy.html">Privacy Policy</a>
+      <a href="/terms">Terms</a>
+      <a href="/sitemap.xml">Sitemap</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var activeCategory = null;
+
+  function selectCategory(cat) {
+    if (activeCategory === cat) { clearFilter(); return; }
+    activeCategory = cat;
+    var tc = document.getElementById('card-tech');
+    var nc = document.getElementById('card-nontech');
+    if (cat === 'tech') {
+      tc.classList.add('selected');    tc.classList.remove('dimmed');
+      nc.classList.remove('selected'); nc.classList.add('dimmed');
+    } else {
+      nc.classList.add('selected');    nc.classList.remove('dimmed');
+      tc.classList.remove('selected'); tc.classList.add('dimmed');
+    }
+    filterAll();
+  }
+
+  function clearFilter() {
+    activeCategory = null;
+    document.getElementById('card-tech').classList.remove('selected','dimmed');
+    document.getElementById('card-nontech').classList.remove('selected','dimmed');
+    filterAll();
+  }
+
+  function filterAll() {
+    var search  = document.getElementById('searchInput').value.toLowerCase().trim();
+    var cards   = document.querySelectorAll('.blog-card[data-cat]');
+    var visible = 0;
+    cards.forEach(function(card) {
+      var catMatch    = !activeCategory || card.dataset.cat === activeCategory;
+      var searchMatch = !search || card.innerText.toLowerCase().includes(search);
+      if (catMatch && searchMatch) { card.classList.remove('hidden'); visible++; }
+      else { card.classList.add('hidden'); }
+    });
+    var label = activeCategory ? (activeCategory === 'tech' ? 'Technical' : 'Non-Technical') : 'all';
+    document.getElementById('filterInfo').innerHTML =
+      'Showing <strong>' + visible + ' ' + label + ' article' + (visible !== 1 ? 's' : '') + '</strong>';
+    document.getElementById('clearBtn').classList.toggle('visible', !!(activeCategory || search));
+    document.getElementById('noResults').style.display = visible === 0 ? 'block' : 'none';
+  }
+</script>
+
+</body>
+</html>
