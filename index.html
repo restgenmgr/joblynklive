@@ -3,8 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joblynk Live – Blog & Insights</title>
+    <title>Joblynk Live – Data, SQL & Career Insights</title>
     <link rel="stylesheet" href="blog.css">
+    <style>
+        .hero { text-align: center; padding: 4rem 1rem 3rem; }
+        .hero h1 { font-size: 2.8rem; font-weight: 800; color: #0f172a; margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; color: #475569; max-width: 600px; margin: 0 auto 2rem; }
+        .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+        .btn-primary { background: #3b82f6; color: white; padding: 0.8rem 2rem; border-radius: 2rem; text-decoration: none; font-weight: 600; }
+        .btn-secondary { background: white; border: 2px solid #3b82f6; color: #3b82f6; padding: 0.8rem 2rem; border-radius: 2rem; text-decoration: none; font-weight: 600; }
+        .topics { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin: 2rem 0; }
+        .topic-tag { background: #e2e8f0; color: #1e293b; padding: 0.4rem 1rem; border-radius: 2rem; font-size: 0.9rem; font-weight: 500; }
+        .latest { max-width: 700px; margin: 0 auto 3rem; }
+        .latest h2 { font-size: 1.6rem; margin-bottom: 1rem; color: #0f172a; }
+        .latest ul { list-style: none; padding: 0; }
+        .latest ul li { padding: 0.7rem 0; border-bottom: 1px solid #e2e8f0; }
+        .latest ul li a { color: #3b82f6; text-decoration: none; font-weight: 500; }
+        .latest ul li a:hover { text-decoration: underline; }
+    </style>
 </head>
 <body>
 <div class="blog-container">
@@ -12,18 +28,40 @@
         <a href="/">Home</a>
         <a href="/blog-pages/">All Posts</a>
     </div>
-    <h1>Welcome to Joblynk Live</h1>
-    <p>Insights on data science, SQL, data engineering, and career growth.</p>
-    <hr>
-    <h2>📖 Latest Posts</h2>
-    <ul>
-        <li><a href="/blog-pages/data-pipeline-architecture-patterns.html">Data Pipeline Architecture Patterns</a></li>
-        <li><a href="/blog-pages/sql-filtering-where-and-or-in-between.html">SQL Filtering Data – WHERE, AND, OR, IN, BETWEEN</a></li>
-        <li><a href="/blog-pages/sql-select-beginners-guide.html">SQL for Beginners – How to Write Your First SELECT Query</a></li>
-        <li><a href="/blog-pages/silence-isnt-peace.html">Silence Isn't Peace. It's a Slow Poison.</a></li>
-        <li><a href="/blog-pages/data-scientist-guide.html">What Does a Data Scientist Do? – A Complete Beginner's Guide (2026)</a></li>
-    </ul>
-    <p><a href="/blog-pages/">→ View all posts</a></p>
+
+    <!-- HERO SECTION -->
+    <div class="hero">
+        <h1>Welcome to Joblynk Live 🚀</h1>
+        <p>Your go-to resource for Data Engineering, SQL, Data Science, and Career Growth insights.</p>
+        <div class="hero-btns">
+            <a href="/blog-pages/" class="btn-primary">📖 Read the Blog</a>
+            <a href="/blog.html" class="btn-secondary">🗂️ All Articles</a>
+        </div>
+    </div>
+
+    <!-- TOPICS -->
+    <div class="topics">
+        <span class="topic-tag">📊 Data Engineering</span>
+        <span class="topic-tag">🗃️ SQL</span>
+        <span class="topic-tag">🤖 AI & ML</span>
+        <span class="topic-tag">💼 Career Growth</span>
+        <span class="topic-tag">⚛️ Frontend Dev</span>
+    </div>
+
+    <!-- LATEST POSTS -->
+    <div class="latest">
+        <h2>📌 Latest Posts</h2>
+        <ul>
+            <li><a href="/blog-pages/data-pipeline-architecture-patterns.html">Data Pipeline Architecture Patterns</a></li>
+            <li><a href="/blog-pages/sql-filtering-where-and-or-in-between.html">SQL Filtering – WHERE, AND, OR, IN, BETWEEN</a></li>
+            <li><a href="/blog-pages/sql-select-beginners-guide.html">SQL for Beginners – How to Write Your First SELECT Query</a></li>
+            <li><a href="/blog-pages/data-scientist-guide.html">What Does a Data Scientist Do? – Beginner's Guide (2026)</a></li>
+            <li><a href="/blog-pages/silence-isnt-peace.html">Silence Isn't Peace. It's a Slow Poison.</a></li>
+        </ul>
+        <p><a href="/blog-pages/">→ View all posts</a></p>
+    </div>
+
+    <footer>© 2026 Joblynk.live – Empowering your career with insights & AI-forward skills.</footer>
 </div>
 </body>
 </html>
