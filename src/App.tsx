@@ -1,21 +1,21 @@
-﻿import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Chatbot from "./components/Chatbot";
-import Toast from "./components/Toast";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Jobs from "./pages/Jobs";
-import Pricing from "./pages/Pricing";
-import ResumeTools from "./pages/ResumeTools";
-import SamplesVault from "./pages/samplesvault";
-import EmployerPortal from "./pages/employerportal";
-import PayPortal from "./pages/PayPortal";
-import Contact from "./pages/Contact";
-import Disclaimer from "./pages/Disclaimer";
-import SignUp from "./pages/SignUp";
-import Support from "./pages/Support";
-import Blog from "./pages/Blog";
+﻿import { BrowserRouter as Router, Routes, Route } from "react-router-dom";`nimport Privacy from "./pages/Privacy";
+import Navbar from "./components/Navbar";`nimport Privacy from "./pages/Privacy";
+import Footer from "./components/Footer";`nimport Privacy from "./pages/Privacy";
+import Chatbot from "./components/Chatbot";`nimport Privacy from "./pages/Privacy";
+import Toast from "./components/Toast";`nimport Privacy from "./pages/Privacy";
+import Home from "./pages/Home";`nimport Privacy from "./pages/Privacy";
+import About from "./pages/About";`nimport Privacy from "./pages/Privacy";
+import Jobs from "./pages/Jobs";`nimport Privacy from "./pages/Privacy";
+import Pricing from "./pages/Pricing";`nimport Privacy from "./pages/Privacy";
+import ResumeTools from "./pages/ResumeTools";`nimport Privacy from "./pages/Privacy";
+import SamplesVault from "./pages/samplesvault";`nimport Privacy from "./pages/Privacy";
+import EmployerPortal from "./pages/employerportal";`nimport Privacy from "./pages/Privacy";
+import PayPortal from "./pages/PayPortal";`nimport Privacy from "./pages/Privacy";
+import Contact from "./pages/Contact";`nimport Privacy from "./pages/Privacy";
+import Disclaimer from "./pages/Disclaimer";`nimport Privacy from "./pages/Privacy";
+import SignUp from "./pages/SignUp";`nimport Privacy from "./pages/Privacy";
+import Support from "./pages/Support";`nimport Privacy from "./pages/Privacy";
+import Blog from "./pages/Blog";`nimport Privacy from "./pages/Privacy";
 
 function App() {
   return (
@@ -37,7 +37,7 @@ function App() {
             <Route path="/signup" element={<SignUp />} />
             <Route path="/support" element={<Support />} />
             <Route path="/blog" element={<Blog />} />
-          </Routes>
+          <Route path="/privacy" element={<Privacy />} />`n      </Routes>
         </main>
         <Footer />
         <Chatbot />
@@ -47,3 +47,4 @@ function App() {
   );
 }
 export default App;
+
