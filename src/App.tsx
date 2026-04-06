@@ -1,6 +1,4 @@
-﻿cd C:\Users\admin\joblynklive-new
-$cleanApp = @'
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+﻿import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Chatbot from "./components/Chatbot";
@@ -52,6 +50,3 @@ function App() {
 }
 
 export default App;
-'@
-Set-Content -Path "src\App.tsx" -Value $cleanApp -Encoding UTF8
-Write-Host "✅ App.tsx fixed" -ForegroundColor Green
