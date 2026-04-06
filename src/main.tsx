@@ -1,4 +1,4 @@
-import React from 'react'
+﻿import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
 
@@ -9,6 +9,4 @@ if (root) {
       <App />
     </React.StrictMode>
   )
-} else {
-  console.error('Root element not found')
 }
