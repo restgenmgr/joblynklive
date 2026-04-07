@@ -151,7 +151,7 @@ const Home = () => {
 
           {/* Support Email */}
           <p style={{ color: '#94a3b8' }}>
-            📧 joblynklive@gmail.com
+            📧 tech-support@joblynk.live
           </p>
         </div>
       </div>
@@ -349,7 +349,10 @@ const Home = () => {
                 fontWeight: 'bold',
                 margin: '0 auto 20px'
               }}>
-            
+                VK
+              </div>
+              <h3 style={{ margin: '0 0 5px 0' }}>Vikram Khanna</h3>
+              <p style={{ color: '#64748b' }}>Founder</p>
             </div>
 
             {/* Team Member 2 */}
@@ -367,9 +370,9 @@ const Home = () => {
                 fontWeight: 'bold',
                 margin: '0 auto 20px'
               }}>
-                NAT
+                NP
               </div>
-              <h3 style={{ margin: '0 0 5px 0' }}>Nigel A Thomas</h3>
+              <h3 style={{ margin: '0 0 5px 0' }}>Neha Patel</h3>
               <p style={{ color: '#64748b' }}>Head of Operations</p>
             </div>
 
@@ -388,9 +391,9 @@ const Home = () => {
                 fontWeight: 'bold',
                 margin: '0 auto 20px'
               }}>
-                DS
+                AR
               </div>
-              <h3 style={{ margin: '0 0 5px 0' }}>Das Sbbaraj</h3>
+              <h3 style={{ margin: '0 0 5px 0' }}>Abdul Rahman</h3>
               <p style={{ color: '#64748b' }}>Tech Lead</p>
             </div>
           </div>

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import emblem from "../assets/emblem.jpg";
-import Navbar from "./components/Navbar";
 
 interface NavbarProps {
   isDarkMode: boolean;
@@ -9,60 +8,47 @@ interface NavbarProps {
 }
 
 const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode }) => {
- const pages = [
-    { name: "Home", path: "/", desc: "Main dashboard" },
-    { name: "About", path: "/about", desc: "About our platform" },
-    { name: "Jobs", path: "/jobs", desc: "Find career opportunities" },
-    { name: "Pricing", path: "/pricing", desc: "Subscription plans" },
-    { name: "Resume Builder", path: "/resumebuilder", desc: "Create your CV" },
-    { name: "Samples Vault", path: "/samplesvault", desc: "View resume samples" },
-    { name: "Employer Portal", path: "/employerportal", desc: "Recruiter access" },
-    { name: "Pay Portal", path: "/payportal", desc: "Payments & billing" },
-    { name: "Contact", path: "/contact", desc: "Reach our team" },
-    { name: "Blog", path: "/blog", desc: "Career tips & articles" }
+  const pages = [
+    { name: "Home", path: "/", description: "Landing page overview" },
+    { name: "About", path: "/about", description: "About us and mission" },
+    { name: "Jobs", path: "/jobs", description: "Available job listings" },
+    { name: "Contact", path: "/contact", description: "Reach out to us" },
+    { name: "Pricing", path: "/pricing", description: "Our service plans" },
+    { name: "Resume Builder", path: "/resumebuilder", description: "Create resumes easily" },
+    { name: "Samples Vault", path: "/samplesvault", description: "View sample resumes" },
+    { name: "Employer Portal", path: "/employerportal", description: "For employers" },
+    { name: "Pay Portal", path: "/payportal", description: "Payments and subscriptions" },
   ];
 
   return (
-    <nav style={{
-      display: "flex",
-      alignItems: "center",
-      background: "#ffffff",
-      padding: "10px",
-      boxShadow: "0 2px 5px rgba(0,0,0,0.1)"
-    }}>
-      <img
-        src={emblem}
-        alt="logo"
-        style={{
-          width: "50px",
-          height: "50px",
-          marginRight: "20px"
-        }}
-      />
-      <div style={{
-        display: "flex",
-        flexWrap: "wrap",
-        gap: "10px"
-      }}>
-        {pages.map((p) => (
+    <nav className={`navbar ${isDarkMode ? "dark" : "light"} p-4 flex items-center justify-between`}>
+      {/* Emblem on top-left */}
+      <div className="flex items-center gap-2">
+        <img src={emblem} alt="Emblem" className="w-12 h-12 rounded-full" />
+        <span className="font-bold text-xl">NigelThomas</span>
+      </div>
+
+      {/* 9 Button Frames */}
+      <div className="flex gap-3">
+        {pages.map((page) => (
           <Link
-            key={p.name}
-            to={p.path}
-            style={{
-              border: "1px solid #ccc",
-              borderRadius: "6px",
-              padding: "8px",
-              width: "130px",
-              textDecoration: "none",
-              textAlign: "center",
-              background: "#f7f7f7"
-            }}
+            key={page.name}
+            to={page.path}
+            title={page.description}
+            className="px-3 py-2 border rounded hover:bg-blue-500 hover:text-white transition"
           >
-            <div style={{ fontWeight: "bold" }}>{p.name}</div>
-            <div style={{ fontSize: "11px", marginTop: "4px" }}>{p.desc}</div>
+            {page.name}
           </Link>
         ))}
       </div>
+
+      {/* Dark mode toggle */}
+      <button
+        onClick={toggleDarkMode}
+        className="ml-4 px-3 py-2 border rounded"
+      >
+        {isDarkMode ? "Light Mode" : "Dark Mode"}
+      </button>
     </nav>
   );
 };
