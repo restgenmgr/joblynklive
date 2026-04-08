@@ -3,21 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Companies | JobLynk</title>
+    <title>Companies Hiring | JobLynk</title>
     <link rel="stylesheet" href="/blog.css">
     <style>
-        body { font-family: 'DM Sans', sans-serif; background: #f4f7fb; margin: 0; padding: 2rem; text-align: center; }
-        .container { max-width: 800px; margin: 0 auto; background: white; padding: 2rem; border-radius: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        body { font-family: 'DM Sans', sans-serif; background: #f4f7fb; margin: 0; padding: 2rem; }
+        .container { max-width: 1000px; margin: 0 auto; }
+        .company-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px,1fr)); gap: 1rem; }
+        .company-card { background: white; padding: 1rem; border-radius: 12px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
         h1 { color: #0B1A2E; }
         a { color: #00C896; text-decoration: none; }
-        a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Companies</h1>
-        <p>This page is coming soon. Thank you for your patience.</p>
-        <p><a href="/">← Back to Home</a></p>
+<div class="container">
+    <h1>Companies Hiring Now</h1>
+    <div class="company-grid">
+        <div class="company-card">Razorpay</div>
+        <div class="company-card">Zepto</div>
+        <div class="company-card">Meesho</div>
+        <div class="company-card">PhonePe</div>
+        <div class="company-card">CRED</div>
+        <div class="company-card">Swiggy</div>
+        <div class="company-card">Zomato</div>
+        <div class="company-card">Groww</div>
+        <div class="company-card">Ola</div>
+        <div class="company-card">Nykaa</div>
+        <div class="company-card">Flipkart</div>
+        <div class="company-card">Paytm</div>
     </div>
+    <p><a href="/">← Back to Home</a></p>
+</div>
 </body>
 </html>
