@@ -1,87 +1,51 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JobLynk Blog</title>
+    <title>Joblynk.live Blog | Career & Tech Insights</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: #f8fafc; color: #0f172a; line-height: 1.6; padding: 2rem 1rem; }
+        .container { max-width: 1000px; margin: 0 auto; }
+        .blog-header { text-align: center; margin-bottom: 3rem; padding-bottom: 1rem; border-bottom: 3px solid #3b82f6; }
+        .blog-header h1 { font-size: 2.5rem; background: linear-gradient(135deg, #1e3a8a, #3b82f6); background-clip: text; -webkit-background-clip: text; color: transparent; }
+        .blog-header p { color: #475569; margin-top: 0.5rem; }
+        .cards-grid { display: flex; flex-direction: column; gap: 2rem; }
+        .card { background: white; border-radius: 1.5rem; padding: 1.8rem; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05), 0 8px 10px -6px rgba(0,0,0,0.02); transition: transform 0.2s ease, box-shadow 0.2s ease; border-left: 6px solid; }
+        .card:hover { transform: translateY(-3px); box-shadow: 0 20px 30px -12px rgba(0,0,0,0.1); }
+        .card-career { border-left-color: #3b82f6; }
+        .card-ai { border-left-color: #8b5cf6; }
+        .card-react { border-left-color: #10b981; }
+        .card-values { border-left-color: #f59e0b; }
+        .card-skills { border-left-color: #ec489a; }
+        .card h2 { font-size: 1.6rem; margin-bottom: 0.5rem; color: #0f172a; }
+        .card h3 { font-size: 1.25rem; margin: 1rem 0 0.5rem; color: #1e293b; }
+        .card p, .card li { color: #334155; }
+        .card ul, .card ol { margin: 0.75rem 0 0.75rem 1.5rem; }
+        .badge { display: inline-block; background: #e2e8f0; padding: 0.2rem 0.7rem; border-radius: 2rem; font-size: 0.75rem; font-weight: 600; color: #1e293b; margin-bottom: 0.75rem; }
+        .published { font-size: 0.8rem; color: #475569; margin: 0.5rem 0 1rem 0; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+        .published-badge { background: #dcfce7; color: #166534; padding: 0.2rem 0.6rem; border-radius: 2rem; font-weight: 600; font-size: 0.7rem; }
+        hr { margin: 1rem 0; border: 0; height: 1px; background: #e2e8f0; }
+        pre { background: #f1f5f9; padding: 0.75rem; border-radius: 0.75rem; overflow-x: auto; font-family: 'Courier New', monospace; font-size: 0.85rem; }
+        footer { margin-top: 3rem; text-align: center; font-size: 0.85rem; color: #64748b; border-top: 1px solid #e2e8f0; padding-top: 2rem; }
+        @media (max-width: 640px) { .card { padding: 1.2rem; } .card h2 { font-size: 1.3rem; } }
+    </style>
 </head>
-
 <body>
-
-<header>
-    <h1>JobLynk Blog</h1>
-</header>
-
-<nav>
-    <a href="index.html">Home</a>
-    <a href="blog.html">Blog</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-</nav>
-
 <div class="container">
-
-    <h2>Tech Articles</h2>
-
-    <div class="post">
-        <h2><a href="blog/data-analysis-python.html">Beginner’s Guide to Data Analysis Using Python</a></h2>
+    <div class="blog-header"><h1>📘 Joblynk.live Blog</h1><p>Career insights • AI trends • Tech skills • Frontend mastery</p></div>
+    <div class="cards-grid">
+        <div class="card card-career"><div class="badge">🔹 Career Tips</div><div class="published"><span class="published-badge">PUBLISHED</span> 📅 April 4, 2026</div><h2>How to Find a Job in India</h2><p>Learn the best strategies to find jobs online and offline.</p><h3>Top Resume Tips for Freshers</h3><p>Create a strong resume that gets noticed by recruiters.</p><h3>Best Job Portals in India</h3><p>Explore platforms to find the best job opportunities.</p><hr><h2>Top Resume Tips to Get Hired Faster</h2><p>Your resume is the first impression you make on a recruiter. A well-structured resume can significantly increase your chances of getting shortlisted. Start by keeping your resume clean, simple, and easy to read. Highlight your key skills, achievements, and experience clearly. Use bullet points and avoid long paragraphs. Make sure your contact details are correct and professional. Customize your resume for each job you apply to. Use keywords from the job description to match employer expectations. This also helps your resume pass automated screening systems. Finally, proofread your resume carefully to avoid errors. A polished resume shows professionalism and attention to detail.</p><h2>How to Prepare for Job Interviews</h2><p>Preparing for a job interview is essential to making a strong impression. Start by researching the company and understanding the role you are applying for. Practice answering common interview questions such as “Tell me about yourself” and “What are your strengths and weaknesses?”. Confidence and clarity are key. Dress professionally and arrive on time. Good communication skills and a positive attitude can set you apart from other candidates. After the interview, follow up with a thank-you email to show your interest in the position.</p></div>
+        <div class="card card-skills"><div class="badge">🔥 Trending Skills</div><div class="published"><span class="published-badge">PUBLISHED</span> 📅 April 4, 2026</div><h2>Top Skills in Demand in 2026</h2><p>The job market is evolving rapidly, and staying updated with in-demand skills is crucial. Technical skills like programming, data analysis, and digital marketing are highly sought after. Soft skills such as communication, teamwork, and problem-solving are equally important. Employers look for candidates who can adapt and work effectively in teams. Learning new skills through online courses and certifications can boost your career opportunities. Platforms like JobLynk help you find jobs that match your skill set. Investing in your skills today will help you secure better job opportunities in the future.</p></div>
+        <div class="card card-ai"><div class="badge">🤖 AI Generalist</div><div class="published"><span class="published-badge">PUBLISHED</span> 📅 April 4, 2026</div><h2>The AI Generalist: Job Description, Responsibilities, and the Future of Work</h2><p>Imagine a professional who understands machine learning, integrates AI into workflows, and translates technical complexity into business strategy. That is the modern AI Generalist. An AI Generalist has a broad understanding of the AI ecosystem and works across data, models, and business goals. They bridge the gap between technical teams and business leaders.</p><h3>Key Responsibilities</h3><ul><li>Implement AI-driven automation solutions</li><li>Build workflows and internal tools</li><li>Evaluate AI outputs for accuracy and bias</li><li>Integrate AI into business processes</li></ul><h3>Skills Required</h3><ul><li>Programming (Python, JavaScript)</li><li>Understanding of AI models and APIs</li><li>Strong analytical thinking</li><li>Excellent communication skills</li></ul><h3>Salary & Outlook</h3><p>AI Generalists earn between $95,000 and $180,000 annually. Demand is growing rapidly as companies adopt AI across operations. They are becoming one of the most valuable roles in modern organizations, driving innovation and efficiency.</p></div>
+        <div class="card card-ai"><div class="badge">✍️ Prompt Engineering</div><div class="published"><span class="published-badge">PUBLISHED</span> 📅 April 4, 2026</div><h2>AI Prompt Engineering: Job Description, Responsibilities, and Career Outlook</h2><p>Prompt Engineering is the art of communicating with AI systems effectively. It involves designing instructions that guide AI to produce accurate and useful outputs. Prompt Engineers bridge human language and machine intelligence, ensuring AI systems perform efficiently and align with business goals.</p><h3>Key Responsibilities</h3><ul><li>Design and optimize AI prompts</li><li>Test and evaluate AI responses</li><li>Improve accuracy and reduce bias</li><li>Build prompt libraries and best practices</li></ul><h3>Skills Required</h3><ul><li>Experience with LLMs (GPT, Claude, etc.)</li><li>Python and AI frameworks</li><li>Strong language and NLP understanding</li><li>Analytical and ethical thinking</li></ul><h3>Salary & Career Growth</h3><p>Prompt Engineers can earn between $80,000 and $400,000 depending on experience and expertise. Demand is rapidly increasing across industries. This skill is becoming essential for many roles and is shaping the future of work in AI-driven environments.</p></div>
+        <div class="card card-react"><div class="badge">⚛️ React + Vite</div><div class="published"><span class="published-badge">PUBLISHED</span> 📅 April 4, 2026</div><h2>VITE + REACT: The Modern Way to Build Fast Web Apps</h2><p>If you're building modern web applications in 2026, chances are you're using Vite + React — one of the fastest and most efficient frontend setups today.</p><h3>Why Developers Love Vite</h3><ul><li>Lightning-fast dev server startup</li><li>Instant Hot Module Replacement (HMR)</li><li>Optimized builds for production</li><li>Smoother developer experience</li></ul><h3>Why React is Powerful</h3><p>React is a popular JavaScript library used to build dynamic, scalable, and component-based user interfaces. It allows developers to create reusable components and manage complex UIs efficiently.</p><h3>Benefits of Vite + React</h3><ul><li>Faster development workflow</li><li>Better performance</li><li>Clean project structure</li><li>Easy scalability for large applications</li></ul><h3>Typical Workflow</h3><pre>npm create vite@latest my-app\nnpm install\nnpm run dev</pre><p>Within seconds, your app runs on <code>http://localhost:5173</code> with instant updates while coding.</p><h3>Where It's Used</h3><ul><li>Frontend development</li><li>React single-page applications (SPA)</li><li>Startup MVPs</li><li>High-performance dashboards</li></ul><p>If you're a frontend developer, software engineer, or tech enthusiast, learning Vite + React will significantly boost your productivity. <strong>Let's build faster. Let's build smarter.</strong></p></div>
+        <div class="card card-react"><div class="badge">🧩 React Basics</div><div class="published"><span class="published-badge">PUBLISHED</span> 📅 April 4, 2026</div><h2>Beginner React Concept: Components</h2><p>In React, everything is built using components. Think of components as reusable building blocks for your user interface. Instead of repeating the same code multiple times, you create a component once and reuse it throughout your application. This makes development faster and cleaner.</p><pre>function Button() {\n  return &lt;button&gt;Click Me&lt;/button&gt;;\n}</pre><p>Now you can use this Button component anywhere in your app.</p><h3>Benefits of Components</h3><ul><li>Easier to maintain</li><li>Easier to scale</li><li>More organized code</li></ul><p>React's component-based architecture is one of the most powerful ideas in modern web development. It allows developers to build complex applications using simple, reusable pieces.</p></div>
+        <div class="card card-react"><div class="badge">📅 Learning Journey</div><div class="published"><span class="published-badge">PUBLISHED</span> 📅 April 4, 2026</div><h2>Day 1 of Learning Vite + React</h2><p>Today I started exploring Vite + React, and I'm already impressed by the speed and developer experience.</p><h3>What I Learned</h3><ul><li><strong>Vite:</strong> Super fast development server, Instant HMR, Optimized production builds</li><li><strong>React:</strong> Component-based architecture, Reusable UI components, Efficient state management</li></ul><h3>What Surprised Me</h3><p>My project started in less than 2 seconds using Vite.</p><h3>Commands Used</h3><pre>npm create vite@latest my-app\nnpm install\nnpm run dev</pre><p>The app was live on localhost:5173 almost instantly.</p><p><strong>Next Goal:</strong> Building my first React component. Follow my journey as I learn modern frontend development.</p></div>
+        <div class="card card-values"><div class="badge">🌟 Leadership & Character</div><div class="published"><span class="published-badge">PUBLISHED</span> 📅 April 4, 2026</div><h2>Mastering Success Through Core Values and Character</h2><p>Success is not just about reaching the top; it is about having the foundation to stay there. Without a defined set of core values, even the most talented individuals risk being shaped by their surroundings. True stability comes from an inner life governed by principles rather than circumstances. When your inner world is in order, you can navigate challenges with integrity and clarity.</p><h3>The Blueprint for Lasting Leadership</h3><p>In a world that often feels chaotic, core values act as the guiding principles of our personal and professional lives. They provide the structure and stability needed for long-term growth.</p><h3>Key Pillars for a Resilient Career</h3><ul><li><strong>Integrity Over Talent:</strong> Talent may open doors, but character keeps you there. Many successful individuals fail not because of lack of ability, but because their inner foundation is weak.</li><li><strong>Consistency, Not Convenience:</strong> Success requires discipline. You cannot choose values based on convenience. Consistency in small actions leads to major achievements.</li><li><strong>Inner Governance:</strong> Developing a strong inner life protects you from external pressures. Living by higher principles ensures stability and long-term success.</li></ul><p><em>Are you building a career that only looks good on the outside, or one that is strong enough on the inside to handle the pressure of your ambitions?</em></p></div>
     </div>
-
-    <div class="post">
-        <h2><a href="blog/machine-learning-basics.html">Machine Learning Basics</a></h2>
-    </div>
-
-    <div class="post">
-        <h2><a href="blog/python-libraries.html">Python Libraries</a></h2>
-    </div>
-
-    <div class="post">
-        <h2><a href="blog/sql-guide.html">SQL Guide</a></h2>
-    </div>
-
-    <div class="post">
-        <h2><a href="blog/data-cleaning.html">Data Cleaning</a></h2>
-    </div>
-
-    <div class="post">
-        <h2><a href="blog/data-visualization.html">Data Visualization</a></h2>
-    </div>
-
-    <div class="post">
-        <h2><a href="blog/data-scientist-roadmap.html">Data Scientist Roadmap</a></h2>
-    </div>
-
-    <div class="post">
-        <h2><a href="blog/ai-vs-ml.html">AI vs ML</a></h2>
-    </div>
-
-    <div class="post">
-        <h2><a href="blog/data-projects.html">Data Projects</a></h2>
-    </div>
-
-    <div class="post">
-        <h2><a href="blog/big-data.html">Big Data</a></h2>
-    </div>
-
-    <!-- ✅ NON-TECH STARTS HERE -->
-
-    <h2>Non-Tech Articles</h2>
-
-    <div class="post">
-        <h2><a href="blog/interview-tips.html">Top Interview Tips</a></h2>
-    </div>
-
-    <div class="post">
-        <h2><a href="blog/job-search-guide.html">How to Find Jobs Online</a></h2>
-    </div>
-
+    <footer>© 2026 Joblynk.live – Empowering your career with insights & AI-forward skills.</footer>
 </div>
-
-<footer>
-    <p>© 2026 JobLynk.live</p>
-    <a href="privacy.html">Privacy</a> |
-    <a href="contact.html">Contact</a>
-</footer>
-
 </body>
 </html>
