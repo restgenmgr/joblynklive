@@ -1,53 +1,23 @@
-﻿import React from "react";
-import { Link, useNavigate } from "react-router-dom";
-import emblem from "../assets/emblem.jpg";
+﻿import { Link } from "react-router-dom";
 
-const Navbar: React.FC = () => {
-  const navigate = useNavigate();
-
-  const pages = [
-    { name: "Home", path: "/", desc: "Main dashboard" },
-    { name: "About", path: "/about", desc: "About our platform" },
-    { name: "Jobs", path: "/jobs", desc: "Find career opportunities" },
-    { name: "Pricing", path: "/pricing", desc: "Subscription plans" },
-    { name: "Resume Builder", path: "/resumebuilder", desc: "Create your CV" },
-    { name: "Samples Vault", path: "/samplesvault", desc: "View resume samples" },
-    { name: "Employer Portal", path: "/employerportal", desc: "Recruiter access" },
-    { name: "Pay Portal", path: "/payportal", desc: "Payments & billing" },
-    { name: "Contact", path: "/contact", desc: "Reach our team" },
-    { name: "Disclaimer", path: "/disclaimer", desc: "Legal information" },
-    { name: "Support", path: "/support", desc: "Get help & contact" },
-    { name: "Sign Up", path: "/signup", desc: "Create account" },
-    { name: "Privacy", path: "/privacy", desc: "Privacy policy" },
-  ];
-
-  const blogButtons = [
-    { filter: "tech", icon: "💻", name: "Technical Blogs", desc: "Dev, Data, AI", bg: "#0B1A2E", border: "#1E3350", hoverBorder: "#00C896", nameColor: "#00C896", descColor: "#6B90B0" },
-    { filter: "nontech", icon: "💼", name: "Non-Tech Blogs", desc: "Sales, HR, Marketing", bg: "#EBF2FF", border: "#C7D8F8", hoverBorder: "#1A6EF5", nameColor: "#1A6EF5", descColor: "#4A6A9A" },
-  ];
-
+function Navbar() {
   return (
-    <nav style={{ display: "flex", alignItems: "center", background: "#ffffff", padding: "10px", boxShadow: "0 2px 5px rgba(0,0,0,0.1)", position: "sticky", top: 0, zIndex: 1000, flexWrap: "wrap", gap: "10px" }}>
-      <img src={emblem} alt="logo" style={{ width: "50px", height: "50px", marginRight: "10px" }} />
-      <div style={{ display: "flex", flexWrap: "wrap", gap: "10px", alignItems: "flex-start" }}>
-        {pages.map((p) => (
-          <Link key={p.name} to={p.path} style={{ border: "1px solid #ccc", borderRadius: "6px", padding: "8px", width: "130px", textDecoration: "none", textAlign: "center", background: "#f7f7f7", display: "block", color: "inherit" }}>
-            <div style={{ fontWeight: "bold", fontSize: "13px" }}>{p.name}</div>
-            <div style={{ fontSize: "11px", marginTop: "4px", color: "#666" }}>{p.desc}</div>
-          </Link>
-        ))}
-        {blogButtons.map((btn) => (
-          <button key={btn.filter} onClick={() => navigate("/blog", { state: { filter: btn.filter } })} style={{ border: `1px solid ${btn.border}`, borderRadius: "6px", padding: "8px", width: "130px", cursor: "pointer", textAlign: "center", background: btn.bg, fontFamily: "inherit" }}
-            onMouseEnter={e => { e.currentTarget.style.borderColor = btn.hoverBorder; }}
-            onMouseLeave={e => { e.currentTarget.style.borderColor = btn.border; }}>
-            <div style={{ fontSize: "16px", marginBottom: "2px" }}>{btn.icon}</div>
-            <div style={{ fontWeight: "bold", fontSize: "12px", color: btn.nameColor }}>{btn.name}</div>
-            <div style={{ fontSize: "10px", marginTop: "3px", color: btn.descColor }}>{btn.desc}</div>
-          </button>
-        ))}
-      </div>
+    <nav style={{background:"#0f172a", padding:"12px", display:"flex", flexWrap:"wrap", gap:"8px"}}>
+      <Link to="/" style={{color:"#fbbf24", padding:"8px 12px", border:"1px solid #b45309", borderRadius:"6px", textDecoration:"none", fontSize:"13px", fontWeight:"bold"}}>Home</Link>
+      <Link to="/about" style={{color:"#fbbf24", padding:"8px 12px", border:"1px solid #b45309", borderRadius:"6px", textDecoration:"none", fontSize:"13px", fontWeight:"bold"}}>About</Link>
+      <Link to="/jobs" style={{color:"#fbbf24", padding:"8px 12px", border:"1px solid #b45309", borderRadius:"6px", textDecoration:"none", fontSize:"13px", fontWeight:"bold"}}>Jobs</Link>
+      <Link to="/pricing" style={{color:"#fbbf24", padding:"8px 12px", border:"1px solid #b45309", borderRadius:"6px", textDecoration:"none", fontSize:"13px", fontWeight:"bold"}}>Pricing</Link>
+      <Link to="/resumebuilder" style={{color:"#fbbf24", padding:"8px 12px", border:"1px solid #b45309", borderRadius:"6px", textDecoration:"none", fontSize:"13px", fontWeight:"bold"}}>Resume Builder</Link>
+      <Link to="/samplesvault" style={{color:"#fbbf24", padding:"8px 12px", border:"1px solid #b45309", borderRadius:"6px", textDecoration:"none", fontSize:"13px", fontWeight:"bold"}}>Samples Vault</Link>
+      <Link to="/employerportal" style={{color:"#fbbf24", padding:"8px 12px", border:"1px solid #b45309", borderRadius:"6px", textDecoration:"none", fontSize:"13px", fontWeight:"bold"}}>Employer Portal</Link>
+      <Link to="/payportal" style={{color:"#fbbf24", padding:"8px 12px", border:"1px solid #b45309", borderRadius:"6px", textDecoration:"none", fontSize:"13px", fontWeight:"bold"}}>Pay Portal</Link>
+      <Link to="/contact" style={{color:"#fbbf24", padding:"8px 12px", border:"1px solid #b45309", borderRadius:"6px", textDecoration:"none", fontSize:"13px", fontWeight:"bold"}}>Contact</Link>
+      <Link to="/disclaimer" style={{color:"#fbbf24", padding:"8px 12px", border:"1px solid #b45309", borderRadius:"6px", textDecoration:"none", fontSize:"13px", fontWeight:"bold"}}>Disclaimer</Link>
+      <Link to="/signup" style={{color:"#fbbf24", padding:"8px 12px", border:"1px solid #b45309", borderRadius:"6px", textDecoration:"none", fontSize:"13px", fontWeight:"bold"}}>Sign Up</Link>
+      <Link to="/support" style={{color:"#fbbf24", padding:"8px 12px", border:"1px solid #b45309", borderRadius:"6px", textDecoration:"none", fontSize:"13px", fontWeight:"bold"}}>Support</Link>
+      <Link to="/blog" style={{color:"#fbbf24", padding:"8px 12px", border:"1px solid #b45309", borderRadius:"6px", textDecoration:"none", fontSize:"13px", fontWeight:"bold"}}>Blog</Link>
+      <Link to="/privacy" style={{color:"#fbbf24", padding:"8px 12px", border:"1px solid #b45309", borderRadius:"6px", textDecoration:"none", fontSize:"13px", fontWeight:"bold"}}>Privacy</Link>
     </nav>
   );
-};
-
+}
 export default Navbar;
