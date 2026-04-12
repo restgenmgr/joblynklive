@@ -373,7 +373,7 @@ const Home = () => {
                 DS
               </div>
               <h3 style={{ margin: '0 0 5px 0' }}>Das Subaraj</h3>
-              <p style={{ color: '#64748b' }}>Head of Operations</p>
+              <p style={{ color: '#64748b' }}>Support & Data </p>
             </div>
         </div>
       </div>
