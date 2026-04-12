@@ -1,4 +1,4 @@
-import React from 'react'; 
+﻿import React from 'react'; 
 
 const Home = () => {
   return (
@@ -88,16 +88,16 @@ const Home = () => {
                 margin: '0 0 15px 0',
                 fontSize: '1.8rem'
               }}>
-                White · ₹49
+                White Â· â‚¹49
               </h2>
               <ul style={{ 
                 listStyle: 'none', 
                 padding: 0, 
                 margin: 0 
               }}>
-                <li style={{ marginBottom: '12px' }}>✅ Professional Resume</li>
-                <li style={{ marginBottom: '12px' }}>✅ Cover Letter</li>
-                <li>✅ 1 Updated Employee Data List</li>
+                <li style={{ marginBottom: '12px' }}>âœ… Professional Resume</li>
+                <li style={{ marginBottom: '12px' }}>âœ… Cover Letter</li>
+                <li>âœ… 1 Updated Employee Data List</li>
               </ul>
             </div>
 
@@ -116,16 +116,16 @@ const Home = () => {
                 margin: '0 0 15px 0',
                 fontSize: '1.8rem'
               }}>
-                Gold · ₹99
+                Gold Â· â‚¹99
               </h2>
               <ul style={{ 
                 listStyle: 'none', 
                 padding: 0, 
                 margin: 0 
               }}>
-                <li style={{ marginBottom: '12px' }}>✨ AI-Optimized Resume</li>
-                <li style={{ marginBottom: '12px' }}>✨ AI-Optimized Cover Letter</li>
-                <li>✨ Premium Data List</li>
+                <li style={{ marginBottom: '12px' }}>âœ¨ AI-Optimized Resume</li>
+                <li style={{ marginBottom: '12px' }}>âœ¨ AI-Optimized Cover Letter</li>
+                <li>âœ¨ Premium Data List</li>
               </ul>
             </div>
           </div>
@@ -151,7 +151,7 @@ const Home = () => {
 
           {/* Support Email */}
           <p style={{ color: '#94a3b8' }}>
-            📧 tech-support@joblynk.live
+            ðŸ“§ joblynklive@gmail.com
           </p>
         </div>
       </div>
@@ -203,8 +203,8 @@ const Home = () => {
                 lineHeight: '1.7',
                 marginBottom: '20px'
               }}>
-                JobLynk.live was born from a simple observation: millions of skilled Indian workers—
-                from factory floors to home offices—struggle to present themselves professionally to
+                JobLynk.live was born from a simple observation: millions of skilled Indian workersâ€”
+                from factory floors to home officesâ€”struggle to present themselves professionally to
                 employers. Either resumes are too expensive, or job platforms are too complicated.
               </p>
               <p style={{
@@ -213,7 +213,7 @@ const Home = () => {
                 lineHeight: '1.7'
               }}>
                 We started in 2024 with a clear mission:{' '}
-                <strong>make job application tools affordable (₹49/₹99) and brutally simple.</strong>{' '}
+                <strong>make job application tools affordable (â‚¹49/â‚¹99) and brutally simple.</strong>{' '}
                 No confusing dashboards. No hidden fees. Just your resume, cover letter, and a direct
                 line to employers who are actually hiring.
               </p>
@@ -242,7 +242,7 @@ const Home = () => {
               padding: '40px'
             }}>
               <h3 style={{ color: '#1e40af', marginBottom: '30px', fontSize: '1.8rem' }}>
-                🎯 Our Promise
+                ðŸŽ¯ Our Promise
               </h3>
               <ul style={{ listStyle: 'none', padding: 0 }}>
                 <li style={{
@@ -262,9 +262,9 @@ const Home = () => {
                     justifyContent: 'center',
                     flexShrink: 0,
                     fontSize: '16px'
-                  }}>✓</span>
+                  }}>âœ“</span>
                   <span style={{ fontSize: '1.1rem' }}>
-                    <strong>No monthly fees</strong> – Pay once, get your documents forever
+                    <strong>No monthly fees</strong> â€“ Pay once, get your documents forever
                   </span>
                 </li>
                 <li style={{
@@ -283,9 +283,9 @@ const Home = () => {
                     alignItems: 'center',
                     justifyContent: 'center',
                     flexShrink: 0
-                  }}>✓</span>
+                  }}>âœ“</span>
                   <span style={{ fontSize: '1.1rem' }}>
-                    <strong>Real human support</strong> – Email us, get reply within hours
+                    <strong>Real human support</strong> â€“ Email us, get reply within hours
                   </span>
                 </li>
                 <li style={{
@@ -303,9 +303,9 @@ const Home = () => {
                     alignItems: 'center',
                     justifyContent: 'center',
                     flexShrink: 0
-                  }}>✓</span>
+                  }}>âœ“</span>
                   <span style={{ fontSize: '1.1rem' }}>
-                    <strong>Privacy first</strong> – Your Aadhaar and data are encrypted
+                    <strong>Privacy first</strong> â€“ Your Aadhaar and data are encrypted
                   </span>
                 </li>
               </ul>
@@ -413,7 +413,7 @@ const Home = () => {
             fontSize: '2rem', 
             marginBottom: '20px' 
           }}>
-            📞 We're Here to Help
+            ðŸ“ž We're Here to Help
           </h3>
           <p style={{ fontSize: '1.2rem', marginBottom: '30px' }}>
             Have questions? Our team responds within hours, not days.
@@ -424,7 +424,7 @@ const Home = () => {
             borderRadius: '12px'
           }}>
             <strong style={{ color: '#facc15', fontSize: '1.3rem' }}>
-              tech-support@joblynk.live
+              joblynklive@gmail.com
             </strong>
           </div>
         </div>
@@ -438,7 +438,7 @@ const Home = () => {
         textAlign: 'center',
         borderTop: '1px solid #334155'
       }}>
-        <p>© 2024 JobLynk.live — Bridging Jobs & Talent</p>
+        <p>Â© 2024 JobLynk.live â€” Bridging Jobs & Talent</p>
         <p style={{ marginTop: '10px', fontSize: '0.9rem' }}>
           No Refund Policy applies. All digital sales are final.
         </p>
@@ -448,3 +448,4 @@ const Home = () => {
 };
 
 export default Home;
+

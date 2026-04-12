@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
@@ -49,26 +49,26 @@ const Home = () => {
           <p style={{ fontSize: 'clamp(1.2rem, 4vw, 1.8rem)', maxWidth: '700px', marginBottom: '3rem', color: '#e2e8f0' }}>Bridging Jobs & Talent</p>
           <div style={{ display: 'flex', gap: '30px', flexWrap: 'wrap', justifyContent: 'center', marginBottom: '3rem' }}>
             <div style={{ background: 'rgba(255,255,255,0.1)', backdropFilter: 'blur(10px)', padding: '30px 40px', borderRadius: '24px', border: '1px solid rgba(255,255,255,0.2)', minWidth: '280px', textAlign: 'left' }}>
-              <h2 style={{ color: '#fff', margin: '0 0 15px 0', fontSize: '1.8rem' }}>White · ₹49</h2>
+              <h2 style={{ color: '#fff', margin: '0 0 15px 0', fontSize: '1.8rem' }}>White Â· â‚¹49</h2>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-                <li style={{ marginBottom: '12px' }}>✅ Professional Resume</li>
-                <li style={{ marginBottom: '12px' }}>✅ Cover Letter</li>
-                <li>✅ 1 Updated Employee Data List</li>
+                <li style={{ marginBottom: '12px' }}>âœ… Professional Resume</li>
+                <li style={{ marginBottom: '12px' }}>âœ… Cover Letter</li>
+                <li>âœ… 1 Updated Employee Data List</li>
               </ul>
             </div>
             <div style={{ background: 'linear-gradient(135deg, rgba(180,83,9,0.2), rgba(180,83,9,0.3))', backdropFilter: 'blur(10px)', padding: '30px 40px', borderRadius: '24px', border: '2px solid #b45309', minWidth: '280px', textAlign: 'left' }}>
-              <h2 style={{ color: '#fbbf24', margin: '0 0 15px 0', fontSize: '1.8rem' }}>Gold · ₹99</h2>
+              <h2 style={{ color: '#fbbf24', margin: '0 0 15px 0', fontSize: '1.8rem' }}>Gold Â· â‚¹99</h2>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-                <li style={{ marginBottom: '12px' }}>✨ AI-Optimized Resume</li>
-                <li style={{ marginBottom: '12px' }}>✨ AI-Optimized Cover Letter</li>
-                <li>✨ Premium Data List</li>
+                <li style={{ marginBottom: '12px' }}>âœ¨ AI-Optimized Resume</li>
+                <li style={{ marginBottom: '12px' }}>âœ¨ AI-Optimized Cover Letter</li>
+                <li>âœ¨ Premium Data List</li>
               </ul>
             </div>
           </div>
           <button style={{ padding: '16px 48px', background: '#2563eb', color: 'white', border: 'none', borderRadius: '50px', fontSize: '1.2rem', fontWeight: '600', cursor: 'pointer', marginBottom: '1.5rem', transition: 'transform 0.2s, background 0.2s' }}
             onMouseEnter={(e) => e.currentTarget.style.background = '#1d4ed8'}
             onMouseLeave={(e) => e.currentTarget.style.background = '#2563eb'}>Get Started</button>
-          <p style={{ color: '#94a3b8' }}>📧 tech-support@joblynk.live</p>
+          <p style={{ color: '#94a3b8' }}>ðŸ“§ joblynklive@gmail.com</p>
         </div>
       </div>
 
@@ -78,27 +78,27 @@ const Home = () => {
         background: 'linear-gradient(135deg, #fef3c7 0%, #fde68a 50%, #d97706 100%)'
       }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
-          <h2 style={{ fontSize: '2.5rem', color: '#78350f', marginBottom: '20px', fontWeight: '700' }}>🔑 Your Keys to Career Success</h2>
+          <h2 style={{ fontSize: '2.5rem', color: '#78350f', marginBottom: '20px', fontWeight: '700' }}>ðŸ”‘ Your Keys to Career Success</h2>
           <p style={{ fontSize: '1.2rem', color: '#451a03', marginBottom: '50px', maxWidth: '700px', marginLeft: 'auto', marginRight: 'auto' }}>
             Unlock professional opportunities with our affordable, easy-to-use tools
           </p>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '30px', justifyContent: 'center' }}>
             {/* 14 keys - map through an array for brevity */}
             {[
-              { icon: "🏠", title: "Home", desc: "Main dashboard" },
-              { icon: "📖", title: "About", desc: "About our platform" },
-              { icon: "💼", title: "Jobs", desc: "Find career opportunities" },
-              { icon: "💰", title: "Pricing", desc: "Subscription plans" },
-              { icon: "📄", title: "Resume Builder", desc: "Create your CV" },
-              { icon: "📁", title: "Samples Vault", desc: "View resume samples" },
-              { icon: "🏢", title: "Employer Portal", desc: "Recruiter access" },
-              { icon: "💳", title: "Pay Portal", desc: "Payments & billing" },
-              { icon: "📞", title: "Contact", desc: "Reach our team" },
-              { icon: "⚖️", title: "Disclaimer", desc: "Legal information" },
-              { icon: "✍️", title: "Sign Up", desc: "Create account" },
-              { icon: "🛟", title: "Support", desc: "Get help & contact" },
-              { icon: "📝", title: "Blog", desc: "Career tips & articles" },
-              { icon: "🔒", title: "Privacy", desc: "Privacy policy" }
+              { icon: "ðŸ ", title: "Home", desc: "Main dashboard" },
+              { icon: "ðŸ“–", title: "About", desc: "About our platform" },
+              { icon: "ðŸ’¼", title: "Jobs", desc: "Find career opportunities" },
+              { icon: "ðŸ’°", title: "Pricing", desc: "Subscription plans" },
+              { icon: "ðŸ“„", title: "Resume Builder", desc: "Create your CV" },
+              { icon: "ðŸ“", title: "Samples Vault", desc: "View resume samples" },
+              { icon: "ðŸ¢", title: "Employer Portal", desc: "Recruiter access" },
+              { icon: "ðŸ’³", title: "Pay Portal", desc: "Payments & billing" },
+              { icon: "ðŸ“ž", title: "Contact", desc: "Reach our team" },
+              { icon: "âš–ï¸", title: "Disclaimer", desc: "Legal information" },
+              { icon: "âœï¸", title: "Sign Up", desc: "Create account" },
+              { icon: "ðŸ›Ÿ", title: "Support", desc: "Get help & contact" },
+              { icon: "ðŸ“", title: "Blog", desc: "Career tips & articles" },
+              { icon: "ðŸ”’", title: "Privacy", desc: "Privacy policy" }
             ].map((key, idx) => (
               <Link
                 key={idx}
@@ -142,19 +142,19 @@ const Home = () => {
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '40px', alignItems: 'start' }}>
             <div>
-              <p style={{ fontSize: '1.1rem', color: '#334155', lineHeight: '1.7', marginBottom: '20px' }}>JobLynk.live was born from a simple observation: millions of skilled Indian workers—from factory floors to home offices—struggle to present themselves professionally to employers. Either resumes are too expensive, or job platforms are too complicated.</p>
-              <p style={{ fontSize: '1.1rem', color: '#334155', lineHeight: '1.7' }}>We started in 2024 with a clear mission: <strong>make job application tools affordable (₹49/₹99) and brutally simple.</strong> No confusing dashboards. No hidden fees. Just your resume, cover letter, and a direct line to employers who are actually hiring.</p>
+              <p style={{ fontSize: '1.1rem', color: '#334155', lineHeight: '1.7', marginBottom: '20px' }}>JobLynk.live was born from a simple observation: millions of skilled Indian workersâ€”from factory floors to home officesâ€”struggle to present themselves professionally to employers. Either resumes are too expensive, or job platforms are too complicated.</p>
+              <p style={{ fontSize: '1.1rem', color: '#334155', lineHeight: '1.7' }}>We started in 2024 with a clear mission: <strong>make job application tools affordable (â‚¹49/â‚¹99) and brutally simple.</strong> No confusing dashboards. No hidden fees. Just your resume, cover letter, and a direct line to employers who are actually hiring.</p>
               <div style={{ display: 'flex', gap: '40px', marginTop: '40px' }}>
                 <div><h3 style={{ color: '#2563eb', fontSize: '2.2rem', margin: 0 }}>500+</h3><p style={{ color: '#475569' }}>Job Seekers Placed</p></div>
                 <div><h3 style={{ color: '#2563eb', fontSize: '2.2rem', margin: 0 }}>200+</h3><p style={{ color: '#475569' }}>Verified Employers</p></div>
               </div>
             </div>
             <div style={{ background: '#e6f0ff', borderRadius: '32px', padding: '40px' }}>
-              <h3 style={{ color: '#1e40af', marginBottom: '30px', fontSize: '1.8rem' }}>🎯 Our Promise</h3>
+              <h3 style={{ color: '#1e40af', marginBottom: '30px', fontSize: '1.8rem' }}>ðŸŽ¯ Our Promise</h3>
               <ul style={{ listStyle: 'none', padding: 0 }}>
-                <li style={{ marginBottom: '25px', display: 'flex', gap: '15px', alignItems: 'flex-start' }}><span style={{ background: '#2563eb', color: 'white', width: '28px', height: '28px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, fontSize: '16px' }}>✓</span><span style={{ fontSize: '1.1rem' }}><strong>No monthly fees</strong> – Pay once, get your documents forever</span></li>
-                <li style={{ marginBottom: '25px', display: 'flex', gap: '15px', alignItems: 'flex-start' }}><span style={{ background: '#2563eb', color: 'white', width: '28px', height: '28px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>✓</span><span style={{ fontSize: '1.1rem' }}><strong>Real human support</strong> – Email us, get reply within hours</span></li>
-                <li style={{ display: 'flex', gap: '15px', alignItems: 'flex-start' }}><span style={{ background: '#2563eb', color: 'white', width: '28px', height: '28px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>✓</span><span style={{ fontSize: '1.1rem' }}><strong>Privacy first</strong> – Your Aadhaar and data are encrypted</span></li>
+                <li style={{ marginBottom: '25px', display: 'flex', gap: '15px', alignItems: 'flex-start' }}><span style={{ background: '#2563eb', color: 'white', width: '28px', height: '28px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, fontSize: '16px' }}>âœ“</span><span style={{ fontSize: '1.1rem' }}><strong>No monthly fees</strong> â€“ Pay once, get your documents forever</span></li>
+                <li style={{ marginBottom: '25px', display: 'flex', gap: '15px', alignItems: 'flex-start' }}><span style={{ background: '#2563eb', color: 'white', width: '28px', height: '28px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>âœ“</span><span style={{ fontSize: '1.1rem' }}><strong>Real human support</strong> â€“ Email us, get reply within hours</span></li>
+                <li style={{ display: 'flex', gap: '15px', alignItems: 'flex-start' }}><span style={{ background: '#2563eb', color: 'white', width: '28px', height: '28px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>âœ“</span><span style={{ fontSize: '1.1rem' }}><strong>Privacy first</strong> â€“ Your Aadhaar and data are encrypted</span></li>
               </ul>
             </div>
           </div>
@@ -176,15 +176,15 @@ const Home = () => {
       {/* ===== CONTACT BANNER ===== */}
       <div style={{ background: '#1e293b', color: 'white', padding: '60px 20px', textAlign: 'center' }}>
         <div style={{ maxWidth: '600px', margin: '0 auto' }}>
-          <h3 style={{ color: '#facc15', fontSize: '2rem', marginBottom: '20px' }}>📞 We're Here to Help</h3>
+          <h3 style={{ color: '#facc15', fontSize: '2rem', marginBottom: '20px' }}>ðŸ“ž We're Here to Help</h3>
           <p style={{ fontSize: '1.2rem', marginBottom: '30px' }}>Have questions? Our team responds within hours, not days.</p>
-          <div style={{ background: 'rgba(255,255,255,0.1)', padding: '20px', borderRadius: '12px' }}><strong style={{ color: '#facc15', fontSize: '1.3rem' }}>tech-support@joblynk.live</strong></div>
+          <div style={{ background: 'rgba(255,255,255,0.1)', padding: '20px', borderRadius: '12px' }}><strong style={{ color: '#facc15', fontSize: '1.3rem' }}>joblynklive@gmail.com</strong></div>
         </div>
       </div>
 
       {/* ===== FOOTER ===== */}
       <div style={{ background: '#0f172a', color: '#94a3b8', padding: '30px 20px', textAlign: 'center', borderTop: '1px solid #334155' }}>
-        <p>© 2024 JobLynk.live — Bridging Jobs & Talent</p>
+        <p>Â© 2024 JobLynk.live â€” Bridging Jobs & Talent</p>
         <p style={{ marginTop: '10px', fontSize: '0.9rem' }}>No Refund Policy applies. All digital sales are final.</p>
       </div>
     </>
@@ -192,3 +192,4 @@ const Home = () => {
 };
 
 export default Home;
+
