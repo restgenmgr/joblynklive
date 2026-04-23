@@ -8,7 +8,7 @@ const Navbar = () => {
     { name: "About", path: "/about" },
     { name: "Jobs", path: "/jobs" },
     { name: "Blog", path: "/blog" },
-    { name: "Hotel SOPs", path: "/hotelsop" },   // ✅ FIXED
+    { name: "Hotel SOPs", path: "/hotel-sop-manual.html" }   // ✅ FIXED
     { name: "Pricing", path: "/pricing" },
     { name: "Resume Builder", path: "/resumebuilder" },
     { name: "Samples Vault", path: "/samplesvault" },
