@@ -6,7 +6,7 @@ $advertiseHtml = @'
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advertise for FREE – Post Jobs on JobLynk.live</title>
+    <title>Advertise for FREE â€“ Post Jobs on JobLynk.live</title>
     <meta name="description" content="Post your job openings for FREE on JobLynk.live. Reach thousands of hospitality, maritime, retail, and BPO candidates. No hidden charges.">
     <meta name="keywords" content="free job posting, advertise jobs, post jobs India, free recruitment">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9LDB7E245Y"></script>
@@ -51,17 +51,17 @@ $advertiseHtml = @'
 </nav>
 
 <div class="header">
-    <h1>📢 Advertise for FREE</h1>
-    <p>Post your job openings – Zero cost, maximum reach</p>
+    <h1>ðŸ“¢ Advertise for FREE</h1>
+    <p>Post your job openings â€“ Zero cost, maximum reach</p>
 </div>
 
 <div class="container">
     <div class="free-card">
-        <div class="free-badge">🎉 COMPLETELY FREE</div>
-        <div class="price">₹0</div>
+        <div class="free-badge">ðŸŽ‰ COMPLETELY FREE</div>
+        <div class="price">â‚¹0</div>
         <h2>Post Unlimited Jobs for Free</h2>
-        <p>✓ 30 days visibility on website ✓ Social media promotion ✓ WhatsApp broadcast to candidates ✓ No hidden charges</p>
-        <a href="#postJobForm" class="btn">📢 Post Your Free Job Now</a>
+        <p>âœ“ 30 days visibility on website âœ“ Social media promotion âœ“ WhatsApp broadcast to candidates âœ“ No hidden charges</p>
+        <a href="#postJobForm" class="btn">ðŸ“¢ Post Your Free Job Now</a>
     </div>
 
     <div class="form-card" id="postJobForm">
@@ -95,7 +95,7 @@ $advertiseHtml = @'
             </div>
             <div class="form-group">
                 <label>Salary / Compensation *</label>
-                <input type="text" id="salary" required placeholder="e.g., ₹15,000/month or as per experience">
+                <input type="text" id="salary" required placeholder="e.g., â‚¹15,000/month or as per experience">
             </div>
             <div class="form-group">
                 <label>Job Description & Requirements *</label>
@@ -105,21 +105,21 @@ $advertiseHtml = @'
                 <label>Contact Person Name (for posting)</label>
                 <input type="text" id="contactPerson" placeholder="e.g., Mr. Crasto, Sudhir Tiwari">
             </div>
-            <button type="submit" class="btn" style="background:#2c7da0;">Submit Job Posting →</button>
+            <button type="submit" class="btn" style="background:#2c7da0;">Submit Job Posting â†’</button>
             <div id="formSuccess" class="success"></div>
         </form>
     </div>
 
     <div class="form-card">
-        <h3 style="margin-bottom:0.5rem;">📞 Need Help?</h3>
+        <h3 style="margin-bottom:0.5rem;">ðŸ“ž Need Help?</h3>
         <p><strong>Nigel Thomas</strong> - Operations</p>
-        <p>📱 WhatsApp / Call: <a href="tel:+919769351231">+91 97693 51231</a></p>
-        <p>📧 Email: <a href="mailto:joblynklive@gmail.com">joblynklive@gmail.com</a></p>
+        <p>ðŸ“± WhatsApp / Call: <a href="tel:+919769351231">+91 97693 51231</a></p>
+        <p>ðŸ“§ Email: <a href="mailto:joblynklive@gmail.com">joblynklive@gmail.com</a></p>
     </div>
 </div>
 
 <div class="footer">
-    <p>© 2026 JobLynk.live – Free Job Posting for Employers | <a href="/blog.html">Blog</a> | <a href="/employer.html">Employer</a> | <a href="/contact.html">Contact</a></p>
+    <p>Â© 2026 JobLynk.live â€“ Free Job Posting for Employers | <a href="/blog.html">Blog</a> | <a href="/employer.html">Employer</a> | <a href="/contact.html">Contact</a></p>
 </div>
 
 <script>
@@ -151,7 +151,7 @@ ${description}`;
     window.location.href = mailtoLink;
     
     document.getElementById('formSuccess').style.display = 'block';
-    document.getElementById('formSuccess').innerHTML = '✅ Your job posting request has been submitted. We will contact you within 24 hours.';
+    document.getElementById('formSuccess').innerHTML = 'âœ… Your job posting request has been submitted. We will contact you within 24 hours.';
     document.getElementById('jobPostForm').reset();
 });
 </script>
@@ -160,4 +160,4 @@ ${description}`;
 '@
 
 $advertiseHtml | Out-File -FilePath "advertise.html" -Encoding UTF8
-Write-Host "✅ advertise.html completely rewritten with FREE job posting and contact form" -ForegroundColor Green
+Write-Host "âœ… advertise.html completely rewritten with FREE job posting and contact form" -ForegroundColor Green
