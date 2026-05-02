@@ -35,7 +35,7 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://joblynk.live/contact.html">
     
-    <!-- JSON-LD Structured Data for Contact Page -->
+    <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -68,18 +68,20 @@
         *{margin:0;padding:0;box-sizing:border-box;}
         body{background:#0B1C2C;font-family:'Segoe UI',Roboto,sans-serif;color:#EFF3F8;line-height:1.6;}
         .container{max-width:1200px;margin:0 auto;padding:0 30px;}
-        
-        /* Navigation */
         .navbar{display:flex;justify-content:space-between;align-items:center;padding:20px 0;border-bottom:1px solid #1F374B;flex-wrap:wrap;}
         .logo{font-size:1.8rem;font-weight:700;color:#00FFC6;text-decoration:none;}
         .logo span{color:white;}
         .nav-links{display:flex;gap:28px;flex-wrap:wrap;}
         .nav-links a{color:#DBE5F0;text-decoration:none;font-weight:500;transition:0.2s;}
         .nav-links a:hover,.nav-links a.active{color:#00FFC6;}
-        
-        /* Contact Card */
         .contact-card{background:#132435;border-radius:28px;padding:50px;margin:60px 0;border:1px solid #264A62;}
         h1{font-size:2.8rem;margin-bottom:20px;color:#00FFC6;}
         .subhead{font-size:1.3rem;color:#B8D1EC;margin-bottom:40px;}
         .contact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:30px;margin:40px 0;}
-        .contact-item{background:#0F2639;border-radius:24px;padding:30px;border
+        .contact-item{background:#0F2639;border-radius:24px;padding:30px;border:1px solid #2A5777;transition:transform 0.2s;}
+        .contact-item:hover{transform:translateY(-5px);border-color:#00FFC6;}
+        .contact-item h3{font-size:1.8rem;margin-bottom:15px;color:#DBE5F0;}
+        .contact-item p{margin:10px 0;font-size:1.1rem;}
+        .contact-item a{color:#00FFC6;text-decoration:none;}
+        .contact-item a:hover{text-decoration:underline;}
+        .badge{display:inline-block;background:#1F3A4F;color:#00FFC6;border-radius:60px;padding:5px 15px;font-size:0.
