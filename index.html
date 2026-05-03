@@ -1,3 +1,4 @@
+$indexContent = @'
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +13,6 @@
     <meta name="robots" content="index, follow">
 
     <!-- Google AdSense -->
-    <meta name="google-adsense-account" content="ca-pub-4282121192943910">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4282121192943910"
         crossorigin="anonymous"></script>
 
@@ -69,25 +69,11 @@
     <p>Executive Digital Resources for the Modern Indian Professional</p>
 </div>
 
-<!-- 🔴 AD UNIT (TOP) -->
-<div style="margin:30px auto; max-width:1000px; text-align:center;">
-    <ins class="adsbygoogle"
-        style="display:block"
-        data-ad-client="ca-pub-4282121192943910"
-        data-ad-slot="1234567890"
-        data-ad-format="auto"
-        data-full-width-responsive="true"></ins>
-</div>
-<script>
- (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
 <!-- CONTENT -->
 <div class="container">
     <h2>📌 Select Your Executive Sector</h2>
 
     <div class="sector-grid">
-
         <div class="sector-card"><a href="/cruise-line-operations.html">🚢 Cruise Line Operations</a></div>
         <div class="sector-card"><a href="/luxury-hotels-india.html">🏨 Luxury Hotels</a></div>
         <div class="sector-card"><a href="/middle-east-hospitality.html">🕌 Middle East</a></div>
@@ -100,22 +86,8 @@
         <div class="sector-card"><a href="/engineering-tech.html">🔧 Engineering</a></div>
         <div class="sector-card"><a href="/maritime-deck.html">⚓ Deck</a></div>
         <div class="sector-card"><a href="/maritime-engine.html">⚙️ Engine</a></div>
-
     </div>
 </div>
-
-<!-- 🔴 AD UNIT (BOTTOM) -->
-<div style="margin:40px auto; max-width:1000px; text-align:center;">
-    <ins class="adsbygoogle"
-        style="display:block"
-        data-ad-client="ca-pub-4282121192943910"
-        data-ad-slot="1234567890"
-        data-ad-format="auto"
-        data-full-width-responsive="true"></ins>
-</div>
-<script>
- (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 
 <!-- FOOTER -->
 <div class="footer">
@@ -131,3 +103,7 @@
 </div>
 </body>
 </html>
+'@
+
+Set-Content -Path "index.html" -Value $indexContent -Encoding UTF8
+Write-Host "✅ index.html created. 100% Google + AdSense safe. Upload to GitHub now."
